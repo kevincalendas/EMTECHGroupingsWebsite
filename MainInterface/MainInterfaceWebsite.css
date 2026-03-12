@@ -1,0 +1,319 @@
+body {
+    background-color: rgb(255, 254, 248);
+    overflow-x: hidden;
+}
+
+.ContainerDockTop {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(255, 253, 239, 0.3);
+    backdrop-filter: blur(10px);
+
+    width: 100%;
+    height: 45px;
+    top: 0;
+    left: 0;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+    z-index: 100;
+}
+
+.NameShop {
+    margin-left: 20px;
+    font-family: 'Ira';
+    font-size: 20px;
+    word-spacing: -2px;
+}
+
+.HomeDirect, .ProductDirect, .BlogDirect, .ContactDirect {
+    margin-right: 30px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-family: Helvetica;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.HomeDirect:hover, .ProductDirect:hover, .BlogDirect:hover, .ContactDirect:hover, .Account:hover {
+    scale: 1.1;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.Account {
+    position: absolute;
+    right: 50px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-family: Helvetica;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.HomeDirect {
+    margin-left: 25px;
+}
+
+/* for display */
+
+.ContainerMain {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 550px;
+    top: 65px;
+    left: 50%;
+    translate: -50%;;
+    background-image: url('../ImagesofElements/Preview2AD.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 0;
+}
+
+.MainContextContent {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    background-color: none;
+    translate: 0 -50%;
+    width: 60%;
+    height: 250px;
+}
+
+.MainTitle {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: right;
+    right: 5%;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.MainDescription {
+    position: fixed;
+    bottom: 30px;
+    right: 5%;
+    height: 100px;
+    width: 80%;
+    background-color: none;
+    text-align: justify;
+    text-align-last: right;
+    font-family: Helvetica;
+}
+
+.ShopNowButton {
+    position: absolute;
+    bottom: 15px;
+    right: 5%;
+    width: 175px;
+    height: 50px;
+    background-color: rgb(37, 33, 16);
+    color: white;
+    font-family: Helvetica;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/*FOR CATEGORY 1!! */
+
+.Category1ATitle {
+    position: absolute;
+    top: 600px;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-family: Helvetica;
+    font-weight: lighter;
+}
+
+.Category1Title {
+    position: absolute;
+    top: 625px;
+    width: 100%;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.ContainerPopularProducts {
+    position: absolute;
+    top: 730px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
+    margin-bottom: 100px;
+    
+}
+
+.ProductPop1, .ProductPop2, .ProductPop3, .ProductPop4 {
+    width: 250px;
+    height: 350px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(140, 139, 129, 0.6);
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.ProductPop1:hover, .ProductPop2:hover, .ProductPop3:hover, .ProductPop4:hover {
+    transform: scale(1.05);
+}
+
+.ProductPop1 {
+    background-image: url('../ImagesofProduct/Product1A.png');
+    background-size: cover;
+}
+
+.ProductPop2 {
+    background-image: url('../ImagesofProduct/Product2A.png');
+    background-size: cover;
+}
+
+.ProductPop3 {
+    background-image: url('../ImagesofProduct/Product3A.png');
+    background-size: cover;
+}
+
+.ProductPop4 {
+    background-image: url('../ImagesofProduct/Product4A.png');
+    background-size: cover;
+}
+
+.ProductName {
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+    font-family: Helvetica;
+    font-size: 18px;
+}
+
+.ProductPrice {
+    position: absolute;
+    display: flex;
+    bottom: 5px;
+    font-family: Helvetica;
+    font-size: 15px;
+}
+
+/*Footer*/
+
+.ContainerFooter {
+    position: absolute;
+    top: 2500px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(229, 229, 229);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Category2Title {
+    position: absolute;
+    top: 1120px;
+    width: 100%;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+/*Arrival Product CSS */
+
+.ContainerNewArrivalProducts {
+    position: absolute;
+    top: 1220px;
+    left: 0;
+    width: 100%;
+    height: 450px;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.ProductSerum1, .ProductSerum3 {
+    width: 250px;
+    min-width: 200px;
+    height: 350px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(140, 139, 129, 0.6);
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.175);
+}
+
+.ProductSerum2, .ProductSerum4 {
+    width: 250px;
+    min-width: 200px;
+    height: 350px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(140, 139, 129, 0.6);
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.175);
+}
+
+.ProductSerum1 {
+    background-image: url('../ImagesofProduct/Product5A.png');
+    background-size: cover;
+}
+
+.ProductSerum2 {
+    background-image: url('../ImagesofProduct/Product6A.png');
+    background-size: cover;
+}
+
+.ProductSerum3 {
+    background-image: url('../ImagesofProduct/Product7A.png');
+    background-size: cover;
+}
+
+.ProductSerum4 {
+    background-image: url('../ImagesofProduct/Product8A.png');
+    background-size: cover;
+
+    margin-top: 30px;
+}
+
+.ProductName1A, .ProductName1B, .ProductName1C, .ProductName1D {
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+    font-family: Helvetica;
+    font-size: 18px;
+}
+
+.ProductPrice1A, .ProductPrice1B, .ProductPrice1C, .ProductPrice1D {
+    position: absolute;
+    display: flex;
+    bottom: 5px;
+    font-family: Helvetica;
+    font-size: 15px;
+}
+
+.ProductSerum1:hover, .ProductSerum2:hover, .ProductSerum3:hover, .ProductSerum4:hover {
+    transform: scale(1.05);
+}

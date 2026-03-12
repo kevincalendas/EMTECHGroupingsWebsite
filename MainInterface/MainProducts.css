@@ -1,0 +1,18 @@
+.ContainerPopularProducts:target + .ContainerOpenPop1 {
+    display: block;
+}
+
+.ContainerPopularProducts {
+    pointer-events: all;
+}
+
+.ContainerOpenPop1 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 50;
+}
