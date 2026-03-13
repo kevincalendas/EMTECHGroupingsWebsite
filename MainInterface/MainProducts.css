@@ -1,3 +1,166 @@
+/*MainProducts.css*/
+.MainProductOverview {
+    position: fixed;
+    display: block;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 20%;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    backdrop-filter: url(#distortion) blur(5px);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    z-index: 50;
+    animation: FadeScale 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) both 1s, ResizeWindow 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) 1.3s forwards;
+}
+
+.MainProductImageOverview {
+    position: fixed;
+    top: 25%;
+    translate: 0 -25%;
+    background-image: url('../ImagesofProduct/Product1A.png');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: ResizeIMGOpen 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) 1.3s forwards;
+    border-radius: 10px;
+}
+
+.MainProductOverviewName {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 35px;
+    width: 55%;
+    color: black;
+    opacity: 0;
+    animation: Fadein 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 1.7s forwards;
+}
+
+.CategoryType {
+    position: absolute;
+    display: flex;
+    top: 65px;
+    left: 46%;
+    translate: -50% 0;
+    width: 60px;
+    height: 25px;
+    background-color: rgba(14, 103, 0, 0.807);
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    opacity: 0;
+    animation: Fadein 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 1.7s forwards;
+}
+
+.MainProductOverviewPrice {
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    width: 54%;
+    font-size: 15px;
+    color: black;
+    opacity: 0;
+    animation: Fadein 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 1.7s forwards;
+}
+
+.AddCartButton {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 150px;
+    height: 41px;
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 15px;
+    opacity: 0;
+    border-radius: 7px;
+    animation: Fadein 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 1.7s forwards;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+.BuyButton {
+    position: absolute;
+    bottom: 20px;
+    right: 180px;
+    width: 150px;
+    height: 41px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    opacity: 0;
+    scale: 1;
+    border-radius: 7px;
+    animation: Fadein 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 1.7s forwards;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+.BuyButton:hover, .AddCartButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.BuyButton:active, .AddCartButton:active {
+    transform: scale(1);
+}
+
+@keyframes ResizeIMGOpen {
+    from {
+        width: 100%;
+        height: 100%;
+    }
+    to {
+        width: 40%;
+        height: 100%;
+        scale: 0.97;
+    }
+}
+
+@keyframes FadeScale {
+    from {
+        scale: 0.7;
+        opacity: 0;
+    }
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes ResizeWindow {
+    from {
+        width: 20%;
+        height: 400px;
+    }
+    to {
+        width: 50%;
+        height: 400px;
+    }
+}
+
+@keyframes Fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/*-------------------------------*/
+
 .ContainerPopularProducts:target + .ContainerOpenPop1 {
     display: block;
 }

@@ -11,7 +11,7 @@
 <body>
     <script src="MainInterfaceWebsite.js"></script>
     <div class="ContainerDockTop">
-        <h1 class="NameShop">Cozy Cosmetics</h1>
+        <h1 class="NameShop">Skinly</h1>
         <a href="MainInterfaceWebsite.html" class="HomeDirect">Home</a>
         <a href="ProductInterfaceWebsite.html" class="ProductDirect">Product</a>
         <a href="AboutInterfaceWebsite.html" class="BlogDirect">About</a>
@@ -20,10 +20,19 @@
     </div>
     <div class="ContainerMain">
         <div class="MainContextContent">
-            <h1 class="MainTitle">Welcome to Cozy Cosmetics</h1>
+            <h1 class="MainTitle">Welcome to Skinly</h1>
             <p class="MainDescription">Discover our range of cozy and luxurious cosmetics designed to pamper your skin and elevate your beauty routine. From nourishing skincare to indulgent makeup, we have everything you need to feel comfortable and confident in your own skin.</p>
             <button class="ShopNowButton">Shop Now</button>
         </div>
+    </div>
+
+    <div class="MainProductOverview">
+        <img class="MainProductImageOverview">
+        <h1 class="MainProductOverviewName">Cozy Blanket</h1>
+        <h1 class="CategoryType">Cream</h1>
+        <p class="MainProductOverviewPrice">$49.99</p>
+        <button class="AddCartButton">Add to Cart</button>
+        <button class="BuyButton">Buy Now</button>
     </div>
 
     <h5 class="Category1ATitle">Cozy Category</h5>
@@ -54,7 +63,7 @@
 
     <div class="ContainerNewArrivalProducts">
         <div class="ProductSerum1">
-            <h2 class="ProductName1A">Cozy Blanket</h2>
+            <h2 class="ProductName1A">Dildoe ni ogneta</h2>
             <p class="ProductPrice1A">$49.99</p>
         </div>
         <div class="ProductSerum2">
@@ -75,5 +84,13 @@
     <div class="ContainerFooter">
         <p class="FooterText">© 2024 Cozy Cosmetics. All rights reserved.</p>
     </div>
+
+    <!-- SVG filter for glass distortion effect -->
+    <svg style="display:none;">
+      <filter id="distortion">
+        <feTurbulence type="turbulence" baseFrequency="0.01 0.1" numOctaves="1" result="turbulence"/>
+        <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="8" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </svg>
 </body>
 </html>
