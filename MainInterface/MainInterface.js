@@ -40,6 +40,7 @@ const ProductBuyLists = [
     const AddCartButtonMain = document.getElementById("AddCartButtonMain");
     const BuyButtonMain = document.getElementById("BuyButtonMain");
     const MainProductDescription = document.getElementById("MainProductDescription");
+    const ProductVerifyIcon = document.getElementById("ProductVerifyIcon");
 
 function exitProductOverview() {
     setTimeout(() => {
@@ -52,6 +53,7 @@ function exitProductOverview() {
         BuyButtonMain.style.animation = "FadeOut 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) both";
         MainCoverALL.style.animation = "FadeOut 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) 0.7s both";
         MainProductDescription.style.animation = "FadeOut 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) both";
+        ProductVerifyIcon.style.animation = "FadeOut 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) both";
         setTimeout(() => {
             MainCoverALL.style.display = "none";
             MainProductOverview.style.display = "none";
@@ -85,6 +87,14 @@ function ProductClicked() {
         CurrentProductSelected = 3;
 
         ShowProductOverview();
+    } else if (CurrentProductSelected === 4) {
+        ProductNamePreview.textContent = productList[3].ProductName;
+        ProductPricePreview.textContent = productList[3].ProductPrice;
+        ProductImagePreview.src = ProductBuyLists[3].ProductImage;
+        CategoryType.textContent = productList[3].ProductCategory;
+        CurrentProductSelected = 4;
+
+        ShowProductOverview();
     } else { 
         console.log("Product was not available."); 
     }
@@ -101,7 +111,12 @@ function ShowProductOverview() {
         AddCartButtonMain.style.animation = "Fadein 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) 0.7s both";
         BuyButtonMain.style.animation = "Fadein 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) 0.7s both";
         MainProductDescription.style.animation = "Fadein 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) 0.7s both";
+        ProductVerifyIcon.style.animation = "AnimationSlideVerify 1s ease-out 0.7s both";
 
         MainProductOverview.style.animation = "FadeScale 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) both, ResizeWindow 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) 0.3s both";
         ProductImagePreview.style.animation = "ResizeIMGOpen 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) 0.3s both";
 }
+
+
+
+// Checkout SYSTEM //

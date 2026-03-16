@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="MainInterfaceWebsite.css">
     <link rel="stylesheet" href="../ForFontsCSS/FontsCSS.css">
     <link rel="stylesheet" href="MainProducts.css">
+    <link rel="stylesheet" href="MainPaymentOverview.css">
     <title>CozyCosmetics</title>
 </head>
 <body>
@@ -13,7 +14,11 @@
         <a href="MainInterfaceWebsite.html" class="HomeDirect">Home</a>
         <a href="ProductInterfaceWebsite.html" class="ProductDirect">Product</a>
         <a href="AboutInterfaceWebsite.html" class="BlogDirect">About</a>
-        <a href="ContactInterfaceWebsite.html" class="Account">Account</a>  
+        <a href="ContactInterfaceWebsite.html" class="Account">Account</a>
+        <div class="rightIcons">
+            <img class="ShopBagButton" src="../ImagesofElements/ShopBagIcon.png">
+            <img class="CartBagButton" src="../ImagesofElements/ShoppingCart.png">  
+        </div>
     </div>
     <div class="ContainerMain">
         <div class="MainContextContent">
@@ -30,11 +35,30 @@
         <img class="MainProductImageOverview" id="MainProductImageOverview"alt="Product Image">
         <h1 class="MainProductOverviewName" id="MainProductOverviewName">Product Selected Name</h1>
         <h1 class="CategoryType" id="CategoryType">Cream</h1>
+        <img class="ProductVerifyIcon" id="ProductVerifyIcon" src="../ImagesofElements/verified-badge-profile-icon.png" alt="Product Image">
         <p class="MainProductOverviewPrice" id="MainProductOverviewPrice">$49.99</p>
         <p class="MainProductDescription" id="MainProductDescription"> Description of the Product (LOADING)
             </p>
         <button class="AddCartButtonMain" id="AddCartButtonMain">Add to Cart</button>
         <button class="BuyButtonMain" id="BuyButtonMain">Buy Now</button>
+
+        <div class="PaymentWindow">
+            <h1 class="CheckoutName">Checkout</h1>
+            <div class="QuantityWindowMain" id="QuantityWindowMain">
+                <button class="MinusQuantityMain">-</button>
+                <h1 class="QuantityDisplayMain">1</h1>
+                <button class="AddQuantityMain">+</button>
+            </div>
+
+            <div class="AddressWindow">
+                <h1 class="addressNamee">🏠 Address</h1>
+                <input type="text" class="AddressInputMain"></input>
+            </div>
+
+            <button class="PaymentOptionButtonMain">💸Payment Option</button>
+            
+            <button class="CheckoutButton">Checkout</button>
+        </div>
     </div>
 
     <h5 class="Category1ATitle">Cozy Category</h5>
@@ -56,12 +80,13 @@
             <h2 class="ProductName">Cozy Blanket</h2>
             <p class="ProductPrice">$49.99</p>
         </div>
+        
     </div>
 
     <div class="ContainerOpenPop1">
         <h2 class="ProductTitlePop1">Testing</h2>
     </div>
-    <h1 class="Category2Title">Serums</h1>
+    <h1 class="Category2Title">Our Products</h1>
 
     <div class="ContainerNewArrivalProducts">
         <div class="ProductSerum1">

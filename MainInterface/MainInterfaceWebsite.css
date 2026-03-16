@@ -18,7 +18,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     background-color: rgba(255, 253, 239, 0.3);
-    backdrop-filter: blur(10px);
+    backdrop-filter: url(#distortion) blur(3px);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     width: 90%;
     height: 38px;
@@ -41,7 +41,7 @@ body {
     animation: Slideright 1s cubic-bezier(0.075, 0.82, 0.165, 1) both;
 }
 
-.HomeDirect, .ProductDirect, .BlogDirect, .ContactDirect {
+.HomeDirect, .ProductDirect, .BlogDirect, .ContactDirect, .Account {
     margin-right: 30px;
     text-decoration: none;
     color: black;
@@ -57,15 +57,19 @@ body {
     text-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
-.Account {
-    position: absolute;
-    right: 50px;
-    text-decoration: none;
-    color: black;
-    font-size: 15px;
-    font-family: Helvetica;
-    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    animation: Slideright 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s both;
+.rightIcons {
+    margin-left: auto;
+}
+
+.CartBagButton, .ShopBagButton {
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.CartBagButton:hover, .ShopBagButton:hover {
+    scale: 1.1;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
 }
 
 .HomeDirect {
