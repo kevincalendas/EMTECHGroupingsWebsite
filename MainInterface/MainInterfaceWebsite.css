@@ -38,6 +38,7 @@ body {
     font-family: 'Ira';
     font-size: 20px;
     word-spacing: -2px;
+    animation: Slideright 1s cubic-bezier(0.075, 0.82, 0.165, 1) both;
 }
 
 .HomeDirect, .ProductDirect, .BlogDirect, .ContactDirect {
@@ -47,6 +48,7 @@ body {
     font-size: 15px;
     font-family: Helvetica;
     transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: Slideright 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s both;
 }
 
 .HomeDirect:hover, .ProductDirect:hover, .BlogDirect:hover, .ContactDirect:hover, .Account:hover {
@@ -63,6 +65,7 @@ body {
     font-size: 15px;
     font-family: Helvetica;
     transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: Slideright 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s both;
 }
 
 .HomeDirect {
@@ -72,13 +75,15 @@ body {
 /* for display */
 
 .ContainerMain {
-    display: flex;
-    position: relative;
-    width: 95%;
+    display: block;
+    position: absolute;
+    justify-content: flex-start;
+    align-items: center;
+    width: 92.5%;
     height: 550px;
     top: 75px;
     left: 50%;
-    translate: -50%;;
+    translate: -50% 0;
     background-image: url('../ImagesofElements/Preview2AD.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -109,6 +114,7 @@ body {
     right: 5%;
     font-size: 45px;
     font-weight: 500;
+    animation: Slideright 1s cubic-bezier(0.075, 0.82, 0.165, 1) both;
 }
 
 .MainDescription {
@@ -121,6 +127,7 @@ body {
     text-align: justify;
     text-align-last: right;
     font-family: Helvetica;
+    animation: Slideright 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s both;
 }
 
 .ShopNowButton {
@@ -135,14 +142,14 @@ body {
     font-size: 20px;
     border: none;
     border-radius: 10px;
-    cursor: pointer;
+        cursor: pointer;animation: Slideright 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s both;
 }
 
 /*FOR CATEGORY 1!! */
 
 .Category1ATitle {
     position: relative;
-    top: 0;
+    top: 585px;
     margin-top: 90px;
     width: 100%;
     text-align: center;
@@ -152,8 +159,8 @@ body {
 }
 
 .Category1Title {
-    position: relative;
-    top: 0;
+    position: absolute;
+    top: 730px;
     margin-top: -30px;
     width: 100%;
     text-align: center;
@@ -163,7 +170,7 @@ body {
 
 .ContainerPopularProducts {
     position: absolute;
-    top: 738px;
+    top: 758px;
     left: 0;
     width: 100%;
     height: auto;
@@ -171,12 +178,13 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    gap: 50px;
+    gap: 15px;
     margin-bottom: 100px;
     
 }
 
 .ProductPop1, .ProductPop2, .ProductPop3, .ProductPop4 {
+    cursor: pointer;
     width: 250px;
     height: 350px;
     background-color: white;
@@ -193,7 +201,7 @@ body {
 
 .ProductPop1:hover, .ProductPop2:hover, .ProductPop3:hover, .ProductPop4:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(140, 139, 129, 0.6);
+    box-shadow: 0 0 20px rgba(140, 139, 129, 1);
 }
 
 .ProductPop1:active, .ProductPop2:active, .ProductPop3:active, .ProductPop4:active {
@@ -252,7 +260,7 @@ body {
 
 .Category2Title {
     position: absolute;
-    top: 1120px;
+    top: 1150px;
     width: 100%;
     text-align: center;
     font-size: 45px;
@@ -263,7 +271,7 @@ body {
 
 .ContainerNewArrivalProducts {
     position: absolute;
-    top: 1215px;
+    top: 1255px;
     left: 0;
     width: 100%;
     height: 450px;
@@ -274,7 +282,7 @@ body {
     flex-direction: row;
     border: none;
     border-radius: 10px;
-    gap: 50px;
+    gap: 20px;
 }
 
 .ProductSerum1, .ProductSerum3 {
@@ -349,3 +357,17 @@ body {
 .ProductSerum1:hover, .ProductSerum2:hover, .ProductSerum3:hover, .ProductSerum4:hover {
     transform: scale(1.05);
 }
+
+
+@keyframes Slideright {
+    from {
+        transform: translateX(80px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
