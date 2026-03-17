@@ -16,7 +16,7 @@
         <a href="AboutInterfaceWebsite.html" class="BlogDirect">About</a>
         <a href="ContactInterfaceWebsite.html" class="Account">Account</a>
         <div class="rightIcons">
-            <img class="ShopBagButton" src="../ImagesofElements/ShopBagIcon.png">
+            <img class="ShopBagButton" id="ShopBagButton" src="../ImagesofElements/ShopBagIcon.png">
             <img class="CartBagButton" src="../ImagesofElements/ShoppingCart.png">  
         </div>
     </div>
@@ -42,7 +42,7 @@
         <p class="MainProductDescription" id="MainProductDescription"> Description of the Product (LOADING)
             </p>
         <button class="AddCartButtonMain" id="AddCartButtonMain">Add to Cart</button>
-        <button class="BuyButtonMain" id="BuyButtonMain">Buy Now</button>
+        <button class="BuyButtonMain" id="BuyButtonMain" onclick="BuyNowClicked();">Buy Now</button>
 
         <div class="PaymentWindow" id="PaymentWindow">
             <h1 class="CheckoutName">Checkout</h1>
@@ -70,29 +70,35 @@
                 <h1 class="ProductCostTextCheck" id="ProductCostTextCheck">Product Cost: </h1>
                 <h1 class="ProductShippingFeeTextCheck" id="ProductShippingFeeTextCheck">Shipping Fee: </h1>
                 <h1 class="ProductTotalCostTextCheck" id="ProductTotalCostTextCheck">Total Cost: </h1>
-                <button class="CheckoutButton">Checkout</button>
+                <button class="CheckoutButton" onclick="PlaceOrder();">Checkout</button>
             </div>
         </div>
+    </div>
+    
+    <div class="AddedtoCartCheckWindow" id="AddedtoCartCheckWindow">
+        <img class="AddedtoBagShineIMG" id="AddedtoBagShineIMG" src="../ImagesofElements/ShineIcon.png">
+        <img class="AddedtoBagIMG" id="AddedtoBagIMG" src="../ImagesofElements/ShopBagIcon.png">
+        <h1 class="AddedtoBagH1" id="AddedtoBagH1"> Processing Payment...</h1>
     </div>
 
     <h5 class="Category1ATitle">Cozy Category</h5>
     <h1 class="Category1Title">Popular Products</h1>
     <div class="ContainerPopularProducts">
         <div class="ProductPop1" id="ProductPop1" onclick="CurrentProductSelected = 1; ProductClicked();">
-            <h2 class="ProductName">Cozy Blanket</h2>
-            <p class="ProductPrice">$49.99</p>
+            <h2 class="ProductName">Skinly Facial</h2>
+            <p class="ProductPrice">₱320.00</p>
         </div>
         <div class="ProductPop2" id="ProductPop2" onclick="CurrentProductSelected = 2; ProductClicked();">
-            <h2 class="ProductName">Cozy Blanket</h2>
-            <p class="ProductPrice">$49.99</p>
+            <h2 class="ProductName">Skinly Toner</h2>
+            <p class="ProductPrice">₱250.00</p>
         </div>
         <div class="ProductPop3" id="ProductPop3" onclick="CurrentProductSelected = 3; ProductClicked();">
-            <h2 class="ProductName">Cozy Blanket</h2>
-            <p class="ProductPrice">$49.99</p>
+            <h2 class="ProductName">Skinly Serum</h2>
+            <p class="ProductPrice">₱220.00</p>
         </div>
         <div class="ProductPop4" id="ProductPop4" onclick="CurrentProductSelected = 4; ProductClicked();">
-            <h2 class="ProductName">Cozy Blanket</h2>
-            <p class="ProductPrice">$49.99</p>
+            <h2 class="ProductName">Skinly cleanse</h2>
+            <p class="ProductPrice">₱230.00</p>
         </div>
         
     </div>
@@ -103,33 +109,33 @@
     <h1 class="Category2Title">Our Products</h1>
 
     <div class="ContainerNewArrivalProducts">
-        <div class="ProductSerum1">
-            <h2 class="ProductName1A">Skinly Serum</h2>
-            <p class="ProductPrice1A">$19.98</p>
+        <div class="ProductSerum1" onclick="CurrentProductSelected = 1; ProductClicked();">
+            <h2 class="ProductName1A">Skinly Facial</h2>
+            <p class="ProductPrice1A">₱320.00</p>
         </div>
-        <div class="ProductSerum2">
-            <h2 class="ProductName1B">Skinly Cream</h2>
-            <p class="ProductPrice1B">$25.45</p>
+        <div class="ProductSerum2" onclick="CurrentProductSelected = 2; ProductClicked();">
+            <h2 class="ProductName1B">Skinly Toner</h2>
+            <p class="ProductPrice1B">₱250.00</p>
         </div>
-        <div class="ProductSerum3">
-            <h2 class="ProductName1C">Cozy Blanket</h2>
-            <p class="ProductPrice1C">$16.99</p>
+        <div class="ProductSerum3" onclick="CurrentProductSelected = 3; ProductClicked();">
+            <h2 class="ProductName1C">Skinly Serum</h2>
+            <p class="ProductPrice1C">₱220.00</p>
         </div>
-        <div class="ProductSerum4">
-            <h2 class="ProductName1D">Cozy Blanket</h2>
-            <p class="ProductPrice1D">$18.99</p>
+        <div class="ProductSerum4" onclick="CurrentProductSelected = 4; ProductClicked();">
+            <h2 class="ProductName1D">Skinly cleanse</h2>
+            <p class="ProductPrice1D">₱230.00</p>
         </div>
         
     </div>
 
     <div class="ContainerNewArrivalProducts2">
-        <div class="ProductSerum5">
-            <h2 class="ProductName1A">Skinly Serum</h2>
-            <p class="ProductPrice1A">$19.98</p>
+        <div class="ProductSerum5" onclick="CurrentProductSelected = 5; ProductClicked();">
+            <h2 class="ProductName1A">Skinly Cream</h2>
+            <p class="ProductPrice1A">₱350.00</p>
         </div>
-        <div class="ProductSerum6">
-            <h2 class="ProductName1B">Skinly Cream</h2>
-            <p class="ProductPrice1B">$25.45</p>
+        <div class="ProductSerum6" onclick="CurrentProductSelected = 6; ProductClicked();">
+            <h2 class="ProductName1B">Skinly Bright</h2>
+            <p class="ProductPrice1B">₱299.00</p>
         </div>
         
     </div>

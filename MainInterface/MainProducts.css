@@ -15,7 +15,7 @@
 /*MainProducts.css*/
 .MainProductOverview {
   position: fixed;
-  display: block;
+  display: none;
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -62,7 +62,7 @@
 .MainProductImageOverview {
   position: fixed;
   top: 25%;
-  right: 0;
+  left: 0;
   translate: 0 -25%;
   background-image: url("../ImagesofProduct/Product1A.png");
   background-size: cover;

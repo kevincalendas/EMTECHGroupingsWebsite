@@ -231,22 +231,22 @@ body {
 }
 
 .ProductPop1 {
-  background-image: url("../ImagesofProduct/Product1A.png");
+  background-image: url("../ImagesofPopularProduct/ProductFacial1.png");
   background-size: cover;
 }
 
 .ProductPop2 {
-  background-image: url("../ImagesofProduct/Product2A.png");
+  background-image: url("../ImagesofPopularProduct/ProductToner2.png");
   background-size: cover;
 }
 
 .ProductPop3 {
-  background-image: url("../ImagesofProduct/Product3A.png");
+  background-image: url("../ImagesofPopularProduct/ProductSerum3.png");
   background-size: cover;
 }
 
 .ProductPop4 {
-  background-image: url("../ImagesofProduct/Product4A.png");
+  background-image: url("../ImagesofPopularProduct/ProductCleanser4.png");
   background-size: cover;
 }
 
@@ -357,10 +357,11 @@ body {
 }
 
 .ProductSerum5 {
+  background-image: url('../ImagesofPopularProduct/ProductBright6A.jpg');
+  background-size: cover;
   width: 250px;
   min-width: 200px;
   height: 350px;
-  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -388,22 +389,22 @@ body {
 }
 
 .ProductSerum1 {
-  background-image: url("../ImagesofProduct/Product5A.png");
+  background-image: url("../ImagesofPopularProduct/ProductFacial1.png");
   background-size: cover;
 }
 
 .ProductSerum2 {
-  background-image: url("../ImagesofProduct/Product6A.png");
+  background-image: url("../ImagesofPopularProduct/ProductToner2.png");
   background-size: cover;
 }
 
 .ProductSerum3 {
-  background-image: url("../ImagesofProduct/Product7A.png");
+  background-image: url("../ImagesofPopularProduct/ProductToner2A.jpg");
   background-size: cover;
 }
 
 .ProductSerum4 {
-  background-image: url("../ImagesofProduct/Product8A.png");
+  background-image: url("../ImagesofPopularProduct/ProductCleanser4.png");
   background-size: cover;
 
   margin-top: 30px;
@@ -451,3 +452,4 @@ body {
     opacity: 1;
   }
 }
+

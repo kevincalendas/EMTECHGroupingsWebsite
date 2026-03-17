@@ -1,9 +1,10 @@
 .PaymentWindow {
-  display: block;
+  display: none;
   position: fixed;
-  width: 60%;
+  width: 100%;
   height: 100%;
-  left: 0;
+  left: 50%;
+  translate: -50%;
   background-color: rgba(178, 186, 150, 0);
 }
 
@@ -51,10 +52,10 @@
 }
 
 .AddressWindow {
-  position: fixed;
+  position: absolute;
   top: 55px;
   left: 10px;
-  width: 58%;
+  width: 96%;
   height: 20%;
   border: none;
   border-radius: 10px;
@@ -87,8 +88,8 @@
 }
 
 .OtherPayWindow1 {
-  position: fixed;
-  width: 58%;
+  position: absolute;
+  width: 96%;
   height: 60%;
   bottom: 20px;
   left: 10px;
@@ -98,17 +99,17 @@
 }
 
 .PaymentOptionButtonMain {
-  position: fixed;
+  position: absolute;
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
   font-family: Arial;
   font-weight: 700;
-  top: 195px;
-  right: 42%;
-  width: 23%;
-  height: 8%;
+  top: 36px;
+  right: 10px;
+  width: 40%;
+  height: 13%;
   border: none;
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
@@ -176,7 +177,7 @@
 .CheckoutButton {
   position: absolute;
   left: 10px;
-  width: 95%;
+  width: 98%;
   height: 40px;
   bottom: 10px;
   border: none;
@@ -187,6 +188,12 @@
   font-size: 18px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.CheckoutButton:hover {
+    scale: 1.01;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
 .MinusQuantityMain,
@@ -240,6 +247,53 @@
   font-family: Arial;
   font-weight: 100;
   font-size: 25px;
+}
+
+/* For bag checking verification */
+
+.AddedtoCartCheckWindow {
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 99;
+    width: 500px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: url(#distortion) blur(5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.AddedtoBagIMG {
+    position: absolute;
+    top: 25px;
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation: animationCompleteBuy3 0.5s ease-out;
+    z-index: 10;
+}
+
+.AddedtoBagH1 {
+    position: absolute;
+    bottom: 40px;
+    font-family: Arial;
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+.AddedtoBagShineIMG {
+    position: absolute;
+    top: 25px;
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+    z-index: 11;
 }
 
 /* FOR ANIMATIONS */
@@ -300,10 +354,111 @@
     }
     1% {
         opacity: 0;
+        transform: translateX(-20px);
         display: block;
     }
     100% {
         opacity: 1;
+        transform: translateX(0px);
         display: block;
+    }
+}
+
+@keyframes ClosePaymentWindow {
+    0% {
+        opacity: 1;
+        transform: translateX(0px);
+        display: block;
+        animation-timing-function: ease-out;
+    }
+    99% {
+        opacity: 0;
+        transform: translateX(-20px);
+        display: block;
+        animation-timing-function: ease-out;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-20px);
+        display: none;
+    }
+}
+
+@keyframes WidthChanges {
+    0% {
+        width: 60%;
+        height: 450px;
+    }
+
+    100% {
+        width: 60%;
+        height: 450px;
+    }
+}
+
+/* for animation of the thing */
+
+@keyframes animationCompleteBuy {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(0, 20px);
+    }
+
+    50% {
+        transform: translate(0, -20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes animationCompleteBuy2 {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translate(0, -20x) scaleX(0.8);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 2.275);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes animationCompleteBuy3 {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translate(0, -5px);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes MovetoDown {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(30px);
+        opacity: 0;
     }
 }
