@@ -44,22 +44,34 @@
         <button class="AddCartButtonMain" id="AddCartButtonMain">Add to Cart</button>
         <button class="BuyButtonMain" id="BuyButtonMain">Buy Now</button>
 
-        <div class="PaymentWindow">
+        <div class="PaymentWindow" id="PaymentWindow">
             <h1 class="CheckoutName">Checkout</h1>
-            <div class="QuantityWindowMain" id="QuantityWindowMain">
-                <button class="MinusQuantityMain">-</button>
-                <h1 class="QuantityDisplayMain">1</h1>
-                <button class="AddQuantityMain">+</button>
-            </div>
 
             <div class="AddressWindow">
-                <h1 class="addressNamee">🏠 Address</h1>
+                <h1 class="addressNamee">Address</h1>
                 <input type="text" class="AddressInputMain"></input>
             </div>
 
-            <button class="PaymentOptionButtonMain">💸Payment Option</button>
-            
-            <button class="CheckoutButton">Checkout</button>
+            <div class="OtherPayWindow1">
+                <h1 class="TextPay1H1">Quantity:</h1>
+                <div class="QuantityWindowMain" id="QuantityWindowMain">
+                    <button class="MinusQuantityMain" id="MinusQuantityMain" onclick="DecreaseQuantity();">-</button>
+                    <h1 class="QuantityDisplayMain" id="QuantityDisplayMain">1</h1>
+                    <button class="AddQuantityMain" id="AddQuantityMain" onclick="AddQuantity();">+</button>
+                </div>
+
+                <button class="PaymentOptionButtonMain" onclick="OpenPaymentMethod();">Payment Option</button>
+                <div class="PaymentOptionsMainSel" id="PaymentOptionsMainSel">
+                    <button class="PaymentOption1" onclick="GcashSelected();">Gcash</button>
+                    <button class="PaymentOption1" onclick="BankSelected();">Bank</button>
+                    <button class="PaymentOption1" onclick="CashSelected();">Cash on Delivery</button>
+                </div>
+                <h1 class="ProductSelectedTextCheck" id="ProductSelectedTextCheck">Product Selected: </h1>
+                <h1 class="ProductCostTextCheck" id="ProductCostTextCheck">Product Cost: </h1>
+                <h1 class="ProductShippingFeeTextCheck" id="ProductShippingFeeTextCheck">Shipping Fee: </h1>
+                <h1 class="ProductTotalCostTextCheck" id="ProductTotalCostTextCheck">Total Cost: </h1>
+                <button class="CheckoutButton">Checkout</button>
+            </div>
         </div>
     </div>
 
@@ -92,20 +104,32 @@
 
     <div class="ContainerNewArrivalProducts">
         <div class="ProductSerum1">
-            <h2 class="ProductName1A">Cozy Blanket</h2>
-            <p class="ProductPrice1A">$49.99</p>
+            <h2 class="ProductName1A">Skinly Serum</h2>
+            <p class="ProductPrice1A">$19.98</p>
         </div>
         <div class="ProductSerum2">
-            <h2 class="ProductName1B">Cozy Blanket</h2>
-            <p class="ProductPrice1B">$49.99</p>
+            <h2 class="ProductName1B">Skinly Cream</h2>
+            <p class="ProductPrice1B">$25.45</p>
         </div>
         <div class="ProductSerum3">
             <h2 class="ProductName1C">Cozy Blanket</h2>
-            <p class="ProductPrice1C">$49.99</p>
+            <p class="ProductPrice1C">$16.99</p>
         </div>
         <div class="ProductSerum4">
             <h2 class="ProductName1D">Cozy Blanket</h2>
-            <p class="ProductPrice1D">$49.99</p>
+            <p class="ProductPrice1D">$18.99</p>
+        </div>
+        
+    </div>
+
+    <div class="ContainerNewArrivalProducts2">
+        <div class="ProductSerum5">
+            <h2 class="ProductName1A">Skinly Serum</h2>
+            <p class="ProductPrice1A">$19.98</p>
+        </div>
+        <div class="ProductSerum6">
+            <h2 class="ProductName1B">Skinly Cream</h2>
+            <p class="ProductPrice1B">$25.45</p>
         </div>
         
     </div>

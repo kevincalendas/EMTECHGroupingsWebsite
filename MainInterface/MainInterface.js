@@ -12,99 +12,75 @@ let CurrentProductSelected = null;
 const productList = [
   {
     ProductID: "ProductPop1",
-    ProductName: "Hydrating Face Mist",
-    ProductPrice: "$15.99",
-    ProductCategory: "Cream",
+    ProductName: "Skinly Facial",
+    ProductPrice: "320.00",
+    ProductCategory: "Facial",
   },
   {
     ProductID: "ProductPop2",
-    ProductName: "Glowing Skin Toner",
-    ProductPrice: "$24.99",
+    ProductName: "Skinly Toner",
+    ProductPrice: "250.00",
     ProductCategory: "Toner",
   },
   {
     ProductID: "ProductPop3",
-    ProductName: "Revitalizing Serum",
-    ProductPrice: "$39.99",
+    ProductName: "Skinly Serum",
+    ProductPrice: "220.00",
     ProductCategory: "Serum",
   },
   {
     ProductID: "ProductPop4",
-    ProductName: "Nourishing Moisturizer",
-    ProductPrice: "$29.99",
+    ProductName: "Skinly Cleanse",
+    ProductPrice: "230.00",
     ProductCategory: "Moisturizer",
   },
   {
     ProductID: "ProductSerum1",
-    ProductName: "Anti-Aging Serum",
-    ProductPrice: "$49.99",
+    ProductName: "Skinly Cream",
+    ProductPrice: "350.00",
     ProductCategory: "Serum",
   },
   {
     ProductID: "ProductSerum2",
-    ProductName: "Brightening Serum",
-    ProductPrice: "$39.99",
-    ProductCategory: "Serum",
-  },
-  {
-    ProductID: "ProductSerum3",
-    ProductName: "Hydrating Serum",
-    ProductPrice: "$34.99",
-    ProductCategory: "Serum",
-  },
-  {
-    ProductID: "ProductSerum4",
-    ProductName: "Soothing Serum",
-    ProductPrice: "$34.99",
-    ProductCategory: "Serum",
+    ProductName: "Skinly Bright",
+    ProductPrice: "299.00",
+    ProductCategory: "Brightener",
   },
 ];
 
 const ProductBuyLists = [
   {
-    ProductSelected1: "Hydrating Face Mist",
-    ProductPrice: "$15.99",
+    ProductSelected1: "Skinly Facial",
+    ProductPrice: "320.00",
     ProductImage: "../ImagesofProduct/Product1A.png",
   },
   {
-    ProductSelected2: "Glowing Skin Toner",
-    ProductPrice: "$24.99",
+    ProductSelected2: "Skinly Toner",
+    ProductPrice: "250.00",
     ProductImage: "../ImagesofProduct/Product2A.png",
   },
   {
-    ProductSelected3: "Revitalizing Serum",
-    ProductPrice: "$39.99",
+    ProductSelected3: "Skinly Serum",
+    ProductPrice: "220.00",
     ProductImage: "../ImagesofProduct/Product3A.png",
   },
   {
-    ProductSelected4: "Nourishing Moisturizer",
-    ProductPrice: "$29.99",
+    ProductSelected4: "Skinly Cleanse",
+    ProductPrice: "230.00",
     ProductImage: "../ImagesofProduct/Product4A.png",
   },
   {
-    ProductSelected5: "Anti-Aging Serum",
-    ProductPrice: "$49.99",
+    ProductSelected5: "Skinly Cream",
+    ProductPrice: "350.00",
     ProductImage:
       "https://cdn.shopify.com/s/files/1/0267/4328/1539/products/AntiAgingSerum_1024x1024.jpg?v=1679654416",
   },
   {
-    ProductSelected6: "Brightening Serum",
-    ProductPrice: "$39.99",
+    ProductSelected6: "Skinly Bright",
+    ProductPrice: "299.00",
     ProductImage:
       "https://cdn.shopify.com/s/files/1/0267/4328/1539/products/BrighteningSerum_1024x1024.jpg?v=1679654416",
-  },
-  {
-    ProductSelected7: "Hydrating Serum",
-    ProductPrice: "$34.99",
-    ProductImage:
-      "https://cdn.shopify.com/s/files/1/0267/4328/1539/products/HydratingSerum_1024x1024.jpg?v=1679654416",
-  },
-  {
-    ProductSelected8: "Soothing Serum",
-    ProductPrice: "$34.99",
-    ProductImage:
-      "https://cdn.shopify.com/s/files/1/0267/4328/1539/products/SoothingSerum_1024x1024.jpg?v=1679654416",
-  },
+  }
 ];
 
 const MainCoverALL = document.getElementById("MainCoverALL");
@@ -147,68 +123,4 @@ function exitProductOverview() {
       MainProductOverview.style.display = "none";
     }, 1000);
   }, 100);
-}
-
-function ProductClicked() {
-  if (CurrentProductSelected === 1) {
-    ProductNamePreview.textContent = productList[0].ProductName;
-    ProductPricePreview.textContent = productList[0].ProductPrice;
-    ProductImagePreview.src = ProductBuyLists[0].ProductImage;
-    CategoryType.textContent = productList[0].ProductCategory;
-    CurrentProductSelected = 1;
-
-    ShowProductOverview();
-  } else if (CurrentProductSelected === 2) {
-    ProductNamePreview.textContent = productList[1].ProductName;
-    ProductPricePreview.textContent = productList[1].ProductPrice;
-    ProductImagePreview.src = ProductBuyLists[1].ProductImage;
-    CategoryType.textContent = productList[3].ProductCategory;
-    CurrentProductSelected = 2;
-
-    ShowProductOverview();
-  } else if (CurrentProductSelected === 3) {
-    ProductNamePreview.textContent = productList[2].ProductName;
-    ProductPricePreview.textContent = productList[2].ProductPrice;
-    ProductImagePreview.src = ProductBuyLists[2].ProductImage;
-    CategoryType.textContent = productList[3].ProductCategory;
-    CurrentProductSelected = 3;
-
-    ShowProductOverview();
-  } else if (CurrentProductSelected === 4) {
-    ProductNamePreview.textContent = productList[3].ProductName;
-    ProductPricePreview.textContent = productList[3].ProductPrice;
-    ProductImagePreview.src = ProductBuyLists[3].ProductImage;
-    CategoryType.textContent = productList[3].ProductCategory;
-    CurrentProductSelected = 4;
-
-    ShowProductOverview();
-  } else {
-    console.log("Product was not available.");
-  }
-}
-
-function ShowProductOverview() {
-  MainProductOverview.style.display = "block";
-  MainCoverALL.style.display = "block";
-  MainCoverALL.style.animation = "Fadein 0.5s ease-out both";
-
-  ProductNamePreview.style.animation =
-    "Fadein 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) 0.7s both";
-  ProductPricePreview.style.animation =
-    "Fadein 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) 0.7s both";
-  CategoryType.style.animation =
-    "Fadein 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) 0.7s both";
-  AddCartButtonMain.style.animation =
-    "Fadein 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) 0.7s both";
-  BuyButtonMain.style.animation =
-    "Fadein 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) 0.7s both";
-  MainProductDescription.style.animation =
-    "Fadein 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) 0.7s both";
-  ProductVerifyIcon.style.animation =
-    "AnimationSlideVerify 1s ease-out 0.7s both";
-
-  MainProductOverview.style.animation =
-    "FadeScale 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) both, ResizeWindow 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) 0.3s both";
-  ProductImagePreview.style.animation =
-    "ResizeIMGOpen 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) 0.3s both";
 }

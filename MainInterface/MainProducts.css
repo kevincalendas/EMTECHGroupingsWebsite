@@ -1,349 +1,355 @@
 /* Product Coverer */
 .MainCoverALL {
-    position: fixed;
-    display: none;
-    width: 105%;
-    height: 105%;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-    background-color: none;
-    backdrop-filter: blur(2px);
-    z-index: 48;
+  position: fixed;
+  display: none;
+  width: 105%;
+  height: 105%;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  background-color: none;
+  backdrop-filter: blur(2px);
+  z-index: 48;
 }
 
 /*MainProducts.css*/
 .MainProductOverview {
-    position: fixed;
-    display: block;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    width: 30%;
-    height: 400px;
-    background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    align-items: center;
-    backdrop-filter: url(#distortion) blur(5px);
-    border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.9);
-    overflow-y: visible;
-    white-space: nowwrap;
-    z-index: 50;
-    animation: FadeScale 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) both 1s, ResizeWindow 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) 1.3s forwards;
+  position: fixed;
+  display: block;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 30%;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  backdrop-filter: url(#distortion) blur(5px);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  overflow-y: visible;
+  white-space: nowwrap;
+  z-index: 50;
+  animation:
+    FadeScale 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) both 1s,
+    ResizeWindow 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) 1.3s forwards;
 }
 
 .ExitProductOverviewButton {
-    display: block;
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0);
-    font-size: 50px;
-    line-height: -20;
-    font-family: Arial;
-    border: none;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: block;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 50px;
+  line-height: -20;
+  font-family: Arial;
+  border: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 90;
 }
 
 .ExitProductOverviewButton:hover {
-    scale: 1.1;
+  scale: 1.1;
 }
 
 .ExitProductOverviewButton:active {
-    scale: 0.8;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 2.575);
+  scale: 0.8;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 2.575);
 }
 
 .MainProductImageOverview {
-    position: fixed;
-    top: 25%;
-    left: 0;
-    translate: 0 -25%;
-    background-image: url('../ImagesofProduct/Product1A.png');
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    animation: ResizeIMGOpen 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) 1.3s forwards;
-    border-radius: 10px;
+  position: fixed;
+  top: 25%;
+  right: 0;
+  translate: 0 -25%;
+  background-image: url("../ImagesofProduct/Product1A.png");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: ResizeIMGOpen 0.5s cubic-bezier(0.5, 0.82, 0.165, 1) 1.3s forwards;
+  border-radius: 10px;
 }
 
 .MainProductOverviewName {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 35px;
-    font-family: sans-serif;
-    width: 55%;
-    color: black;
-    opacity: 0;
-    animation: Fadein 0.5s cubic-bezier(0.075, 0.82, 0.165, 1)0.7s forwards;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 35px;
+  font-family: sans-serif;
+  width: 55%;
+  color: black;
+  opacity: 0;
+  animation: Fadein 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s forwards;
 }
 
 .CategoryType {
-    position: absolute;
-    display: flex;
-    top: 80px;
-    left: 48.5%;
-    translate: -53.5% 0;
-    width: 90px;
-    height: 25px;
-    background-color: rgba(14, 103, 0, 0.807);
-    font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    opacity: 0;
-    animation: Fadein 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s forwards;
+  position: absolute;
+  display: flex;
+  top: 80px;
+  left: 48.5%;
+  translate: -53.5% 0;
+  width: 90px;
+  height: 25px;
+  background-color: rgba(14, 103, 0, 0.807);
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  opacity: 0;
+  animation: Fadein 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s forwards;
 }
 
 .ProductVerifyIcon {
-    position: absolute;
-    display: flex;
-    top: 88px;
-    left: 55%;
-    translate: -23.5% 0;
-    width: 25px;
-    height: 25px;
-    font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    border-radius: 100px;
-    color: white;
-    opacity: 1;
-    z-index: -1;
+  position: absolute;
+  display: flex;
+  top: 88px;
+  left: 55%;
+  translate: -23.5% 0;
+  width: 25px;
+  height: 25px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 100px;
+  color: white;
+  opacity: 1;
+  z-index: -1;
 }
 
 .MainProductOverviewPrice {
-    position: absolute;
-    top: 105px;
-    right: 25px;
-    width: 54%;
-    font-size: 15px;
-    font-family: Arial;
-    font-weight: bold;
-    color: black;
-    opacity: 0;
-    animation: Fadein 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s forwards;
+  position: absolute;
+  top: 105px;
+  right: 25px;
+  width: 54%;
+  font-size: 15px;
+  font-family: Arial;
+  font-weight: bold;
+  color: black;
+  opacity: 0;
+  animation: Fadein 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s forwards;
 }
 
 .MainProductDescription {
-    position: absolute;
-    top: 130px;
-    left: 55%;
-    translate: -21% 0;
-    font-family: Arial;
-    width: 55%;
-    height: 235px;
-    background-color: none;
-    overflow-y: auto;
-    margin-bottom: 15px;
+  position: absolute;
+  top: 130px;
+  left: 55%;
+  translate: -21% 0;
+  font-family: Arial;
+  width: 55%;
+  height: 235px;
+  background-color: none;
+  overflow-y: auto;
+  margin-bottom: 15px;
 }
 
 .AddCartButtonMain {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 150px;
-    height: 41px;
-    background-color: transparent;
-    color: black;
-    border: 2px solid black;
-    cursor: pointer;
-    font-size: 15px;
-    opacity: 0;
-    border-radius: 7px;
-    animation: Fadein 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s forwards;
-    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 150px;
+  height: 41px;
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  cursor: pointer;
+  font-size: 15px;
+  opacity: 0;
+  border-radius: 7px;
+  animation: Fadein 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s forwards;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
 
 .BuyButtonMain {
-    position: fixed;
-    bottom: 20px;
-    right: 180px;
-    width: 150px;
-    height: 41px;
-    background-color: rgba(0, 0, 0, 1);
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 15px;
-    opacity: 0;
-    scale: 1;
-    border-radius: 7px;
-    animation: Fadein 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s forwards;
-    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  position: fixed;
+  bottom: 20px;
+  right: 180px;
+  width: 150px;
+  height: 41px;
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  opacity: 0;
+  scale: 1;
+  border-radius: 7px;
+  animation: Fadein 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s forwards;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
 
-.BuyButtonMain:hover, .AddCartButtonMain:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+.BuyButtonMain:hover,
+.AddCartButtonMain:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.BuyButton:active, .AddCartButton:active {
-    transform: scale(1);
+.BuyButton:active,
+.AddCartButton:active {
+  transform: scale(1);
 }
 
 @keyframes ResizeIMGOpen {
-    from {
-        width: 100%;
-        height: 100%;
-    }
-    to {
-        width: 40%;
-        height: 100%;
-        scale: 0.97;
-    }
+  from {
+    width: 100%;
+    height: 100%;
+  }
+  to {
+    width: 40%;
+    height: 100%;
+    scale: 0.97;
+  }
 }
 
 @keyframes ResizeIMGClose {
-    from {
-        width: 40%;
-        height: 100%;
-        scale: 0.97;
-    }
-    to {
-        width: 100%;
-        height: 100%;
-        scale: 1;
-    }
+  from {
+    width: 40%;
+    height: 100%;
+    scale: 0.97;
+  }
+  to {
+    width: 100%;
+    height: 100%;
+    scale: 1;
+  }
 }
 
 @keyframes FadeScale {
-    from {
-        scale: 0.7;
-        opacity: 0;
-    }
-    to {
-        scale: 1;
-        opacity: 1;
-    }
+  from {
+    scale: 0.7;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
 }
 
 @keyframes FadeScaleClose {
-    from {
-        scale: 1;
-        opacity: 1;
-    }
-    to {
-        scale: 0.7;
-        opacity: 0;
-    }
+  from {
+    scale: 1;
+    opacity: 1;
+  }
+  to {
+    scale: 0.7;
+    opacity: 0;
+  }
 }
 
 @keyframes ResizeWindow {
-    from {
-        width: 20%;
-        height: 400px;
-    }
-    to {
-        width: 60%;
-        height: 450px;
-    }
+  from {
+    width: 20%;
+    height: 400px;
+  }
+  to {
+    width: 60%;
+    height: 450px;
+  }
 }
 
 @keyframes ResizeWindowClose {
-    from {
-        width: 60%;
-        height: 450px;
-    }
-    to {
-        width: 20%;
-        height: 400px;
-    }
+  from {
+    width: 60%;
+    height: 450px;
+  }
+  to {
+    width: 20%;
+    height: 400px;
+  }
 }
 
 @keyframes Fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes FadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes BlurIncreased10 {
-    from {
-        backdrop-filter: blur(0px);
-    }
+  from {
+    backdrop-filter: blur(0px);
+  }
 
-    to {
-        backdrop-filter: blur(10px);
-    }
+  to {
+    backdrop-filter: blur(10px);
+  }
 }
 
 @keyframes AnimationSlideVerify {
-    0% {
-        transform: translateX(25px);
-        opacity: 0;
-        scale: 1.3;
-    }
+  0% {
+    transform: translateX(25px);
+    opacity: 0;
+    scale: 1.3;
+  }
 
-    25% {
-        transform: translateX(0px);
-        opacity: 1;
-        scale: 1.3;
-        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 2.575);
-        rotate: 0deg;
-        box-shadow: 0 0 10px rgba(0, 99, 237, 0);
-    }
+  25% {
+    transform: translateX(0px);
+    opacity: 1;
+    scale: 1.3;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 2.575);
+    rotate: 0deg;
+    box-shadow: 0 0 10px rgba(0, 99, 237, 0);
+  }
 
-    50% {
-        transform: translateX(0);
-        opacity: 1;
-        scale: 1.0;
-        rotate: 0deg;
-    }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+    scale: 1;
+    rotate: 0deg;
+  }
 
-    75% {
-        opacity: 1;
-        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 2.575);
-        rotate: -10deg;
-        box-shadow: 0 0 10px rgba(0, 99, 237, 0.7);
-    }
+  75% {
+    opacity: 1;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 2.575);
+    rotate: -10deg;
+    box-shadow: 0 0 10px rgba(0, 99, 237, 0.7);
+  }
 
-    100% {
-        opacity: 1;
-        rotate: 0deg;
-        box-shadow: 0 0 10px rgba(0, 99, 237, 0);
-    }
-
+  100% {
+    opacity: 1;
+    rotate: 0deg;
+    box-shadow: 0 0 10px rgba(0, 99, 237, 0);
+  }
 }
 /*-------------------------------*/
 
 .ContainerPopularProducts:target + .ContainerOpenPop1 {
-    display: block;
+  display: block;
 }
 
 .ContainerPopularProducts {
-    pointer-events: all;
+  pointer-events: all;
 }
 
 .ContainerOpenPop1 {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 50;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 50;
 }
+
+/* MainProducts CSS */
