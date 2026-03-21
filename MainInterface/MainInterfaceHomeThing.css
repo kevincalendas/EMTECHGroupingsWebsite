@@ -1,0 +1,319 @@
+.MainContainer1Preview {
+    position: absolute;
+    top: 775px;
+    left: 0;
+    width: 100%;
+    height: 700px;
+    background-color: rgb(62, 55, 41, 0.5);
+}
+
+.Title1APrev {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    font-size: 100px;
+    font-family: Arial;
+    background-color: none;
+    color: rgb(46, 32, 0);
+
+    animation: Animation1SlideUpParrax 2s ease-out both;
+    animation-range: entry 30% cover 40%;
+    animation-timeline: view();
+}
+
+.Title2APrev {
+    position: absolute;
+    top: 13%;
+    left: 3%;
+    font-family: Arial;
+    font-size: 125px;
+    color: rgba(0, 0, 0, 1);
+    background-color: none;
+    animation: Animation1SlideUpParrax 2s ease-out 3s both;
+    animation-range: entry 30% cover 60%;
+    animation-timeline: view();
+}
+
+.Title3APrev {
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+    font-family: 'Wastinger';
+    color: rgb(46, 32, 0);
+    font-size: 195px;
+    background-color: none;
+    animation: Animation1SlideUpParrax 5s ease-out both, ChangingFontsAnimation 25s ease 2 both;
+    animation-range: entry 30% cover 30%;
+    animation-timeline: view();
+}
+
+.Frame1APrev {
+    display: block;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 35%;
+    width: 500px;
+    height: 100%;
+    background-color: white;
+}
+
+.Image1APrev {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    position: absolute;
+    right: 38%;
+    width: 500px;
+    height: 80%;
+    bottom: 0;
+    background: url('../ImagesofPopularProduct/Models/Model1.png');
+    border: 0px solid black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: Animation1SlideleftParrax 2s ease-out both;
+    animation-range: entry 30% cover 90%;
+    animation-timeline: view();      
+}
+
+.Button1APreview {
+    position: absolute;
+    bottom: 100px;
+    left: 70px;
+    width: 20%;
+    height: 60px;
+    background-color: rgb(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 30px;
+    font-size: 25px;
+    font-family: Arial;
+    font-weight: bolder;
+}
+
+/* For Preview 2 */
+
+.MainContainer2Preview {
+    position: absolute;
+    top: 1475px;
+    left: 0;
+    width: 100%;
+    height: 700px;
+    background-color: rgba(129, 115, 86, 0.5);
+}
+
+.FramePreview1B {
+    position: absolute;
+    top: 16%;
+    left: 7%;
+    width: 500px;
+    height: 500px;
+    scale: 1.3;
+    border: none;
+    border-radius: 30px;
+    background-color: rgba(79, 66, 41, 0.5);
+    aspect-ratio: 1;
+    clip-path: shape(from 94.76% 43.71%,curve to 96.60% 56.83% with 96.70% 50.00%,curve to 93.93% 70.12% with 96.50% 63.65%,curve to 85.57% 80.48% with 91.36% 76.58%,curve to 74.65% 88.55% with 79.79% 84.38%,curve to 63.20% 95.30% with 69.51% 92.72%,curve to 49.90% 98.56% with 56.89% 97.89%,curve to 37.03% 95.28% with 42.92% 99.23%,curve to 24.25% 89.49% with 31.13% 91.32%,curve to 13.62% 81.73% with 17.37% 87.66%,curve to 8.40% 69.22% with 9.87% 75.79%,curve to 5.53% 56.32% with 6.93% 62.65%,curve to 4.75% 43.45% with 4.12% 50.00%,curve to 7.53% 30.50% with 5.37% 36.90%,curve to 14.15% 18.93% with 9.70% 24.10%,curve to 24.74% 10.94% with 18.60% 13.76%,curve to 37.07% 5.67% with 30.87% 8.11%,curve to 50.14% 2.24% with 43.28% 3.23%,curve to 63.54% 3.64% with 57.01% 1.25%,curve to 75.27% 10.44% with 70.08% 6.04%,curve to 84.36% 20.13% with 80.46% 14.84%,curve to 90.54% 31.42% with 88.26% 25.41%,curve to 94.76% 43.71% with 92.82% 37.43%);
+    animation: RotationAnimation 30s ease-out infinite both;
+}
+
+.ImagePreview1B {
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    width: 400px;
+    height: 400px;
+    scale: 1.5;
+    background: url('../ImagesofPopularProduct/CutoutProducts/CreamCutoutProduct2.png');
+    border: 0px solid black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: RepeatUPDOWNAnimPrev 5s ease-in-out infinite 1s both;
+}
+
+.ImagePreview2B {
+    position: absolute;
+    top: 20%;
+    left: 23%;
+    width: 400px;
+    height: 400px;
+    scale: 1;
+    transform: rotate(-15deg);
+
+    background: url('../ImagesofPopularProduct/CutoutProducts/TonerCutoutProduct1.png');
+    border: 0px solid black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    animation:RepeatUPDOWNAnimPrev 5s ease-in-out infinite both;
+    
+
+}
+
+.TitlePreview1B {
+    position: absolute;
+    right: 75px;
+    top: 50px;
+    text-align: right;
+    font-family: Arial;
+    font-size: 100px;
+
+    animation: Animation1SlideUpParrax 5s ease-out 3.5s both, WordSpacingParrax 1s ease-out both;
+    animation-range: entry 80% cover 80%;
+    animation-timeline: view();
+}
+
+.TitlePreview2B {
+    position: absolute;
+    right: 75px;
+    top: 200px;
+    text-align: right;
+    font-family: Arial;
+    font-size: 45px;
+    font-weight: 100;
+
+    animation: Animation1SlideUpParrax 5s ease-out 5s both;
+    animation-range: entry 60% cover 70%;
+    animation-timeline: view();
+}
+
+.MainProductPopular1Div {
+    position: absolute;
+    bottom: 10%;
+    right: 7%;
+    width: 15%;
+    height: 40%;
+    scale: 1.3;
+    border: none;
+    border-radius: 15px;
+    border: 1px solid white;
+    background: url('../ImagesofProduct/Product4A.png');
+    background-size: cover;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation: Animation1SlideUpParrax 5s ease-out 3s both;
+    animation-range: entry 60% cover 35%;
+    animation-timeline: view();
+}
+
+
+.MainProductPopular2Div {
+    position: absolute;
+    bottom: 10%;
+    right: 28%;
+    width: 15%;
+    height: 40%;
+    scale: 1.3;
+    border: none;
+    border-radius: 15px;
+    border: 1px solid white;
+    background: url('../ImagesofProduct/Product1A.png');
+    background-size: cover;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation: Animation1SlideUpParrax 5s ease-out 1s both;
+    animation-range: entry 60% cover 35%;
+    animation-timeline: view();
+}
+
+.MainProductPopular1Div:hover, .MainProductPopular2Div:hover {
+    scale: 1.32;
+}
+
+.MainProductPopular1Div:active, .MainProductPopular2Div:active {
+    scale: 1;
+}
+
+.MainProductPopularH1A, .MainProductPopularH2A {
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    width: 100%;
+    background-color: none;
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(79, 66, 41, 1);
+}
+
+@keyframes WordSpacingParrax {
+    from {
+        word-spacing: 45px;
+    }
+
+    to {
+        word-spacing: -15px;
+    }
+}
+
+
+@keyframes Animation1SlideUpParrax {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes Animation1SlideleftParrax {
+    from {
+        transform: translateX(150px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes RepeatUPDOWNAnimPrev {
+    0% {
+        transform: translate3d(0, 0, 0) rotate(-15deg);
+    }
+    50% {
+        transform: translate3d(0, 50px, 0) rotate(-15deg);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) rotate(-15deg);
+    }
+}
+
+@keyframes ChangingFontsAnimation {
+    0% {
+        font-family: Arial;
+    }
+
+    25% {
+        font-family: Ira;
+    }
+
+    50% {
+        font-family: cursive;
+    }
+
+    75% {
+        font-family: Georgia;
+    }
+
+    100% {
+        font-family: Wastinger;
+    }
+}
+
+@keyframes RotationAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}

@@ -7,3 +7,8 @@
     font-family: 'Ital';
     src: url('SacrificeDemo-8Ox1B.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'Wastinger';
+    src: url('Wastinger.ttf') format('truetype');
+}

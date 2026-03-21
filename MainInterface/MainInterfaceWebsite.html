@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../ForFontsCSS/FontsCSS.css">
     <link rel="stylesheet" href="MainProducts.css">
     <link rel="stylesheet" href="MainPaymentOverview.css">
+    <link rel="stylesheet" href="MainInterfaceHomeThing.css">
     <title>CozyCosmetics</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
         <h1 class="NameShop">Skinly</h1>
         <a href="MainInterfaceWebsite.html" class="HomeDirect">Home</a>
         <a href="ProductInterfaceWebsite.html" class="ProductDirect">Product</a>
-        <a href="AboutInterfaceWebsite.html" class="BlogDirect">About</a>
+        <a href="MainInterfaceAbout.html" class="BlogDirect">About</a>
         <a href="ContactInterfaceWebsite.html" class="Account">Account</a>
         <div class="rightIcons">
             <img class="ShopBagButton" id="ShopBagButton" src="../ImagesofElements/ShopBagIcon.png">
@@ -22,9 +23,37 @@
     </div>
     <div class="ContainerMain">
         <div class="MainContextContent">
-            <h1 class="MainTitle">Welcome to Skinly</h1>
-            <p class="MainDescription">Discover our range of cozy and luxurious cosmetics designed to pamper your skin and elevate your beauty routine. From nourishing skincare to indulgent makeup, we have everything you need to feel comfortable and confident in your own skin.</p>
+            <h1 class="MainTitle">Reveal Your Natural Glow <br>with Skinly</h1>
+            <div class="ImagePreview1ATitle"></div>
             <button class="ShopNowButton">Shop Now</button>
+        </div>
+    </div>
+
+    <!--FOR ANIMATION 1 PREVIEW PRODUCT HOME-->
+
+    <div class="MainContainer1Preview">
+        <h1 class="Title1APrev"> Glow naturally. </h1>
+        <h1 class="Title2APrev"> with </h1>
+        <h1 class="Title3APrev"> Skinly. </h1>
+
+        <div class="Image1APrev"></div>
+        <button class="Button1APreview">View Products</button>
+    </div>
+
+    <!-- FOR ANIMATION 2 PREVIEW PRODUCT HOME-->
+
+    <div class="MainContainer2Preview">
+        <div class="FramePreview1B"></div>
+        <h1 class="TitlePreview1B">The Glow Vibe</h1>
+        <h1 class="TitlePreview2B">Best selling Product</h1>
+        <div class="ImagePreview1B"></div>
+        <div class="ImagePreview2B"></div>
+
+        <div class="MainProductPopular1Div" onclick="CurrentProductSelected = 3; ProductClicked();">
+            <h1 class="MainProductPopularH1A">Skinly Serum</h1>
+        </div>
+        <div class="MainProductPopular2Div" onclick="CurrentProductSelected = 5; ProductClicked();">
+            <h1 class="MainProductPopularH2A">Skinly Cream</h1>
         </div>
     </div>
     
@@ -49,7 +78,7 @@
 
             <div class="AddressWindow">
                 <h1 class="addressNamee">Address</h1>
-                <input type="text" class="AddressInputMain"></input>
+                <input type="text" class="AddressInputMain">Skinly Serum</input>
             </div>
 
             <div class="OtherPayWindow1">

@@ -1,0 +1,282 @@
+body {
+    background-color: rgb(243, 245, 231);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(38, 35, 0, 0.6);
+  border-radius: 5px;
+}
+
+.ContainerDockTop {
+  position: fixed;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(253, 254, 231, 0.7);
+  backdrop-filter: url(#distortion) blur(3px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 85%;
+  height: 38px;
+  top: 10px;
+  left: 50%;
+  translate: -50% 0;
+  border: none;
+  border-radius: 10px;
+  align-items: center;
+  padding: 10px;
+  margin: 0;
+  z-index: 100;
+}
+
+.NameShop {
+  margin-left: 20px;
+  font-family: "Ira";
+  font-size: 20px;
+  word-spacing: -2px;
+  animation: Slideright 1s cubic-bezier(0.075, 0.82, 0.165, 1) both;
+}
+
+.HomeDirect,
+.ProductDirect,
+.BlogDirect,
+.ContactDirect,
+.Account {
+  margin-right: 30px;
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  font-family: Helvetica;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: Slideright 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s both;
+}
+
+.HomeDirect:hover,
+.ProductDirect:hover,
+.BlogDirect:hover,
+.ContactDirect:hover,
+.Account:hover {
+  scale: 1.1;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.rightIcons {
+  margin-left: auto;
+}
+
+.CartBagButton,
+.ShopBagButton {
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.CartBagButton:hover,
+.ShopBagButton:hover {
+  scale: 1.1;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+.HomeDirect {
+  margin-left: 25px;
+}
+
+/* FOr Preview 1 */
+
+.MainPreviewAbout1Display {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    translate: -50%;
+    width: 87%;
+    height: 400px;
+    background-color: rgba(253, 254, 231, 0.7);
+    box-shadow: 0 0 10px rgba(69, 79, 64, 0.7);
+    border: none;
+    border-radius: 15px;
+
+    animation: SlideUp 0.5s ease-out both;
+}
+
+.AboutUsIntroH1 {
+    position: absolute;
+    top: 15%;
+    left: 40px;
+    font-weight: bolder;
+    font-family: 'Wastinger';
+    font-size: 55px;
+
+    animation: SlideUp 0.5s ease-out 0.1s both;
+}
+
+.AboutusPara {
+    position: absolute;
+    top: 37%;
+    left: 40px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    width: 50%;
+    animation: SlideUp 0.5s ease-out 0.2s both;
+}
+
+.AboutUsImageDepth {
+    position: absolute;
+    background-image: url(../ImagesofElements/GirlWithProductHold.png);
+    top: -80px;
+    right: 10px;
+    width: 30%;
+    height: 120%;
+    background-color: rgba(200, 235, 183, 0);
+    border: 0px solid black;
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0 0 10px rgb(57, 51, 0));
+    animation: SlideUp 0.5s ease-out 0.3s both;
+}
+
+.H1AboutA1 {
+    position: absolute;
+    top: 550px;
+    left: 7%;
+    font-family: Arial;
+    font-size: 35px;
+    animation: SlideUp 0.5s ease-out 0.3s both;
+}
+
+.ParaAboutA1 {
+    position: absolute;
+    top: 605px;
+    left: 7%;
+    font-family: Arial;
+    font-size: 20px;
+    text-align: justify;
+    width: 40%;
+    animation: SlideUp 0.5s ease-out 0.4s both;
+}
+
+.Container2A {
+    position: absolute;
+    top: 565px;
+    height: 300px;
+    right: 7%;
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+    width: 40%;
+    background-color: rgba(253, 254, 231, 0.7);
+    box-shadow: 0 0 10px rgba(38, 35, 0, 0.6);
+    border-radius: 10px;
+    animation: SlideUp 0.5s ease-out 0.5s both;
+}
+
+.H1AboutA2 {
+    position: absolute;
+    top: 10px;
+    left: 3%;
+    font-family: Arial;
+    font-size: 40px;
+    text-align: center;
+    width: 40%;
+}
+.ParaAboutA2 {
+    position: absolute;
+    top: 70px;
+    left: 3%;
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+    width: 40%;
+}
+
+.H1AboutA3 {
+    position: absolute;
+    top: 10px;
+    right: 3%;
+    font-family: Arial;
+    font-size: 40px;
+    text-align: center;
+    width: 40%;
+}
+.ParaAboutA3 {
+    position: absolute;
+    top: 70px;
+    right: 3%;
+    font-family: Arial;
+    font-size: 20px;
+    width: 40%;
+    text-align: center;
+}
+
+.H1AboutA4 {
+    position: absolute;
+    bottom: 25px;
+    left: 3%;
+    font-family: Arial;
+    font-size: 40px;
+    text-align: center;
+    width: 40%;
+}
+.ParaAboutA4 {
+    position: absolute;
+    bottom: 5px;
+    left: -1.5%;
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+    width: 50%;
+}
+
+.H1AboutA5 {
+    position: absolute;
+    bottom: 25px;
+    right: 3%;
+    font-family: Arial;
+    font-size: 40px;
+    width: 40%;
+    text-align: center;
+}
+.ParaAboutA5 {
+    position: absolute;
+    bottom: 5px;
+    right: 3%;
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+    width: 40%;
+}
+
+/* FOOTER */
+
+.ContainerFooter {
+  position: absolute;
+  top: 1500px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(219, 240, 214);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* ANIMATION */
+
+@keyframes SlideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+

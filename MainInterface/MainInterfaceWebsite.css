@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(255, 254, 248);
+  background-color: rgb(255, 255, 237);
   overflow-x: hidden;
 }
 
@@ -17,7 +17,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: rgba(255, 253, 239, 0.3);
+  background-color: rgba(253, 254, 231, 0.7);
   backdrop-filter: url(#distortion) blur(3px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   width: 90%;
@@ -93,21 +93,16 @@ body {
   position: absolute;
   justify-content: flex-start;
   align-items: center;
-  width: 92.5%;
+  width: 100%;
   height: 550px;
-  top: 75px;
+  top: 80px;
   left: 50%;
   translate: -50% 0;
-  background-image: url("../ImagesofElements/Preview2AD.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background: none;
   border-radius: 10px;
   margin: 0;
   transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1);
-}
-
-.ContainerMain:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  background-color: none;
 }
 
 .MainContextContent {
@@ -116,19 +111,32 @@ body {
   top: 50%;
   background-color: none;
   translate: 0 -50%;
-  width: 60%;
+  width: 100%;
   height: 250px;
 }
 
 .MainTitle {
   position: absolute;
-  top: 10px;
+  top: -20px;
   width: 100%;
   text-align: right;
   right: 5%;
-  font-size: 45px;
-  font-weight: 500;
+  font-size: 55px;
+  font-family: 'Wastinger';
+  font-weight: bolder;
   animation: Slideright 1s cubic-bezier(0.075, 0.82, 0.165, 1) both;
+}
+
+.ImagePreview1ATitle {
+  position: absolute;
+  margin: 0;
+  top: -150px;
+  left: 50px;
+  width: 500px;
+  height: 220%;
+  background: url('../ImagesofElements/GirlWithProductHold.png');
+  background-size: cover;
+  animation: SlideFadeUp2 1s cubic-bezier(0.165, 0.84, 0.44, 1) both;
 }
 
 .MainDescription {
@@ -136,7 +144,7 @@ body {
   bottom: 30px;
   right: 5%;
   height: 100px;
-  width: 80%;
+  width: 50%;
   background-color: none;
   text-align: justify;
   text-align-last: right;
@@ -164,28 +172,34 @@ body {
 
 .Category1ATitle {
   position: relative;
-  top: 585px;
+  top: 2420px;
   margin-top: 90px;
   width: 100%;
   text-align: center;
   font-size: 20px;
   font-family: Helvetica;
   font-weight: lighter;
+  animation: SlideFadeUp 10s ease-out both;
+  animation-range: entry 30% cover 30%;
+  animation-timeline: view();
 }
 
 .Category1Title {
   position: absolute;
-  top: 730px;
+  top: 2480px;
   margin-top: -30px;
   width: 100%;
   text-align: center;
   font-size: 45px;
   font-weight: 500;
+  animation: SlideFadeUp 10s ease-out 0.5s both;
+  animation-range: entry 30% cover 30%;
+  animation-timeline: view();
 }
 
 .ContainerPopularProducts {
   position: absolute;
-  top: 758px;
+  top: 2558px;
   left: 0;
   width: 100%;
   height: auto;
@@ -195,6 +209,11 @@ body {
   flex-direction: row;
   gap: 15px;
   margin-bottom: 100px;
+
+  /* for parralax effect kineme */
+  animation: SlideFadeUp 15s ease-out 1s both;
+  animation-range: entry 10% cover 30%;
+  animation-timeline: view();
 }
 
 .ProductPop1,
@@ -270,7 +289,7 @@ body {
 
 .ContainerFooter {
   position: absolute;
-  top: 2500px;
+  top: 4500px;
   left: 0;
   width: 100%;
   height: 50px;
@@ -282,18 +301,22 @@ body {
 
 .Category2Title {
   position: absolute;
-  top: 1150px;
+  top: 2955px;
   width: 100%;
   text-align: center;
   font-size: 45px;
   font-weight: 500;
+    /* for parralax effect kineme */
+  animation: SlideFadeUp 5s ease-out both;
+  animation-range: entry 20% cover 55%;
+  animation-timeline: view()
 }
 
 /*Arrival Product CSS */
 
 .ContainerNewArrivalProducts {
   position: absolute;
-  top: 1255px;
+  top: 3055px;
   left: 0;
   width: 100%;
   height: 450px;
@@ -305,11 +328,15 @@ body {
   border: none;
   border-radius: 10px;
   gap: 20px;
+    /* for parralax effect kineme */
+  animation: SlideFadeUp 5s ease-out 2s both;
+  animation-range: entry 10% cover 30%;
+  animation-timeline: view();
 }
 
 .ContainerNewArrivalProducts2 {
   position: absolute;
-  top: 1755px;
+  top: 3555px;
   left: 0;
   width: 100%;
   height: 450px;
@@ -321,6 +348,10 @@ body {
   border: none;
   border-radius: 10px;
   gap: 20px;
+  /* for parralax effect kineme */
+  animation: SlideFadeUp 5s ease-out 2s both;
+  animation-range: entry 10% cover 30%;
+  animation-timeline: view();
 }
 
 .ProductSerum1,
@@ -450,6 +481,30 @@ body {
   to {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+@keyframes SlideFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes SlideFadeUp2 {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 
