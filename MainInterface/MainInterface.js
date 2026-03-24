@@ -7,6 +7,8 @@ const ProductButton6 = document.getElementById("ProductSerum2");
 const ProductButton7 = document.getElementById("ProductSerum3");
 const ProductButton8 = document.getElementById("ProductSerum4");
 
+const ProductSelectedTextCheck = document.getElementById("ProductSelectedTextCheck");
+
 let CurrentProductSelected = null;
 
 const productList = [
@@ -240,6 +242,7 @@ let PaymentOption = 0;
 let Address = "";
 let Quantity = "";
 let shippingfee = 59;
+let productNamee = "";
 
 let product = null;
 let currentBasePrice = 0;
@@ -258,6 +261,8 @@ function BuyNowClicked() {
     currentBasePrice = parseFloat(product.ProductPrice);
     total = currentBasePrice + shippingfee;
 
+
+    productName = product.ProductName;
     ProductSelectedTextCheck.textContent = "Product Selected: " + product.ProductName;
     ProductCostTextCheck.textContent = "Product Cost: ₱" + currentBasePrice.toFixed(2);
     ProductShippingFeeTextCheck.textContent = "Shipping Fee:₱$" + shippingfee;
@@ -372,6 +377,13 @@ function CashSelected() {
   console.log("GcashSelected");
 }
 
+function getPaymentName(option) {
+  if (option === 1) return "GCash";
+  if (option === 2) return "Bank";
+  if (option === 3) return "Cash on Delivery";
+  return "Not Selected";
+}
+
 function OpenPaymentMethod() {
   const PaymentOptionsMainSel = document.getElementById(
     "PaymentOptionsMainSel",
@@ -419,4 +431,95 @@ function PlaceOrder() {
     }, 4500);
   }, 1500);
 
+}
+
+
+//FOR CHECKOUT SYSTEM SECOND VIRSYON BURAT //
+
+function checkoutVer2() {
+  const ProductTotalCostTextCheck = document.getElementById("ProductTotalCostTextCheck");
+    
+  let productNamee = document.getElementById("ProductSelectedTextCheck").textContent;
+  let quantityoftheProduct = parseInt(document.getElementById("QuantityDisplayMain").textContent);
+  let TotalMainCostProd = document.getElementById("ProductTotalCostTextCheck").textContent;
+
+  let paymentName = getPaymentName(PaymentOption);
+
+  if (PaymentOption === 0) {  
+    alert("Please Select a payment method!");
+    return;
+  } else if (PaymentOption > 1) {
+    PlaceOrder();
+    let order = {
+      name: productNamee,
+      quantity: quantityoftheProduct,
+      totalcost: TotalMainCostProd,
+      payment: PaymentOption,
+      image: ProductImagePreview.src,
+      date: new Date().toLocaleString()
+    }
+
+    let purchased = JSON.parse(localStorage.getItem("purchased")) || [];
+    let existing = purchased.find(item => item.name === order.name);
+
+    if (existing) {
+      existing.quantity += order.quantity;
+      existing.totalcost += order.totalcost;
+    } else {
+      purchased.push(order);
+    }
+
+    localStorage.setItem("purchased", JSON.stringify(purchased));
+    }
+
+}
+
+function showOrders() {
+    let list = document.getElementById("PurchasedListDisplay"); 
+    let data = JSON.parse(localStorage.getItem("purchased")) || [];
+    
+    list.innerHTML = ""; 
+
+    data.forEach((item, index) => {
+        list.innerHTML += `
+            <div class="OrderSideCard">
+                <div class="ItemSmallFrame">
+                    <img src="${item.image}" class="ItemThumb">
+                </div>
+                <div class="ItemInfo">
+                    <p class="ItemNameText"><b>${item.name}</b></p>
+                    <p class="ItemDetailsText">Qty: ${item.quantity} | <span class="GoldPrice">${item.totalcost}</span></p>
+                    <p class="ItemDateText">${item.date}</p>
+                    <button onclick="cancelOrder(${index}, this)" class="CancelBtn">Cancel Order</button>
+                </div>
+            </div>
+        `;
+    });
+}
+
+function openPurchased() {
+    document.getElementById("PurchasedWindow").classList.add("active");
+    showOrders(); 
+}
+function closePurchased() {
+    document.getElementById("PurchasedWindow").classList.remove("active");
+}
+
+function cancelOrder(index, button) {
+  let purchased = JSON.parse(localStorage.getItem("purchased")) || [];
+
+  const card = button.closest(".OrderSideCard");
+
+  if (confirm("Are you sure you want to cancel this order?")) {
+      
+    card.style.animation = "ScaleDown 0.3s ease-out forwards";
+
+      setTimeout(() => {
+        purchased.splice(index, 1);
+
+        localStorage.setItem("purchased", JSON.stringify(purchased));
+
+        showOrders();
+      }, 500);
+    }
 }

@@ -29,7 +29,7 @@ body {
   align-items: center;
   padding: 10px;
   margin: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .NameShop {
@@ -264,45 +264,256 @@ body {
 
 .Container4A {
     position: absolute;
-    top: 905px;
+    top: 935px;
     left: 50%;
     translate: -50%;
-    width: 87%;
+    width: 100%;
     border: none;
-    border-radius: 15px;
+    border-radius: 0;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0);
-    height: 500px;
-    background-color: rgba(255, 255, 255, 0);
+    height: 630px;
+    background-color: rgb(197, 197, 197);
+    z-index: 100;
     
     animation: SlideUp 0.5s ease-out 0.5s both;
     animation-range: entry 30% cover 40%;
     animation-timeline: view();
 }
-
-.H1AboutB1 {
-    position: absolute;
-    width: 100%;
-    
-}
-
 .GridContainerB1 {
     position: absolute;
-    top: 80px;
-    background-color: gray;
+    top: 110px;
+    background-color: rgba(128, 128, 128, 0);
     width: 100%;
-    height: 600px;
+    height: 400px;
     left: 50%;
     translate: -50%;
     border: none;
     border-radius: 20px;
+
+    position: absolute;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
 }
 
+.H1AboutB1 {
+    position: absolute;
+    margin: 0;
+    top: 0px;
+    left: 20%;
+    translate: -70%;
+    font-size: 200px;
+    font-family: Moglan;
+    
+    animation: SlideUp 0.5s ease-out 0.5s both;
+    animation-range: entry 30% cover 40%;
+    animation-timeline: view();
+
+}
+
+.H1AboutB2 {
+    position: absolute;
+    margin: 0;
+    bottom: 10px;
+    right: 30%;
+    translate: 70%;
+    font-size: 200px;
+    font-family: Moglan;
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(78, 67, 57);
+    
+
+    animation: SlideUp 0.5s ease-out 0.5s both;
+    animation-range: entry 10% cover 10%;
+    animation-timeline: view();
+}
+
+.ProductWindowB1 {
+    width: 300px;
+    height: 98%;
+    border: none;
+    border-radius: 20px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+
+    background: url(../ImagesofProductCutout/SkinlyCleanse.png);
+    background-size: cover;
+    background-position: 50% 100%;
+
+
+    animation: AnimationUpDownRot1 5s ease-in-out both infinite;
+}
+
+.ProductWindowB2 {
+    width: 300px;
+    height: 98%;
+    border: none;
+    border-radius: 20px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5)); 
+
+    background: url(../ImagesofProductCutout/SkinlyCream.png);
+    background-size: cover;
+    background-position: 50% 100%;
+
+
+    animation: AnimationUpDownRot2 5s 0.3s ease-in-out both infinite;
+}
+
+.ProductWindowB3 {
+    width: 300px;
+    height: 98%;
+    border: none;
+    border-radius: 20px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+
+    background: url(../ImagesofProductCutout/SkinlyFacial.png);
+    background-size: cover;
+    background-position: 50% 100%;
+
+
+    animation: AnimationUpDownRot1 5s 0.2s ease-in-out both infinite;
+}
+
+.ProductWindowB4 {
+    width: 300px;
+    height: 98%;
+    border: none;
+    border-radius: 20px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+
+    background: url(../ImagesofProductCutout/SkinlyToner.png);
+    background-size: cover;
+    background-position: 50% 100%;
+
+
+    animation: AnimationUpDownRot2 5s 0.6s ease-in-out both infinite;
+}
+
+/* FOR POSITIONS OF THE COMPANY BITCHES */
+.H1AboutC1A {
+    position: absolute;
+    margin: 0;
+    top: 30px;
+    left: 50px;
+    font-size: 200px;
+    font-family: Moglan;
+
+    animation: SlideUp 0.5s ease-out 0.5s both;
+    animation-range: entry 70% cover 50%;
+    animation-timeline: view();
+}
+
+.H1AboutC1B {
+    position: absolute;
+    margin: 0;
+    top: 340px;
+    right: 50px;
+    font-size: 200px;
+    font-family: Moglan;
+
+    animation: SlideUp 0.5s ease-out 0.7s both;
+    animation-range: entry 40% cover 30%;
+    animation-timeline: view();
+}
+
+.Container5A {
+    position: absolute;
+    top: 1550px;
+    left: 0;
+    width: 100%;
+    height: 700px;
+    background: url(../ImagesofElements/BackgroundAbout.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.TeamRow1 {
+    position: absolute;
+    top: 190px;
+    left: 40%;
+    translate: -70%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.TeamRow2 {
+    position: absolute;
+    top: 450px;
+    right: 40%;
+    translate: 70%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.CardA1 {
+    background: rgba(255, 253, 253, 0.5);
+    backdrop-filter: blur(10px) url(#distortion);
+    width: 250px;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: 0.3s;
+
+    animation: SlideUp 0.5s ease-out 0.7s both;
+    animation-range: entry 40% cover 30%;
+    animation-timeline: view();
+}
+
+.GoldTier {
+    border: 1px solid #eed68900;
+}
+
+.PhotoFrame {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 15px;
+    border-radius: 5%;
+    overflow: hidden;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
+}
+
+.PhotoFrame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.RoleText {
+    font-size: 20px;
+    color: #3f3f3f;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: Wastinger;
+    margin-bottom: 5px;
+}
+
+.NameText {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.CardA1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
 
 /* FOOTER */
 
 .ContainerFooter1 {
   position: absolute;
-  top: 1700px;
+  top: 2700px;
   left: 0;
   width: 100%;
   height: 50px;
@@ -347,5 +558,36 @@ body {
         opacity: 1;
         transform: translate(0, 0px) scale(1);
     }
+}
+
+@keyframes AnimationUpDownRot1 {
+    0% {
+        transform: translate(0, -20px) rotate(-10deg);
+    }
+
+    50% {
+        transform: translate(0, 20px) rotate(-10deg);
+    }
+
+    100% {
+        transform: translate(0, -20px) rotate(-10deg);
+    }
+    
+}
+
+
+@keyframes AnimationUpDownRot2 {
+    0% {
+        transform: translate(0, -20px) rotate(10deg);
+    }
+
+    50% {
+        transform: translate(0, 20px) rotate(10deg);
+    }
+
+    100% {
+        transform: translate(0, -20px) rotate(10deg);
+    }
+    
 }
 
