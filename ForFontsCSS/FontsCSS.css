@@ -12,3 +12,8 @@
     font-family: 'Wastinger';
     src: url('Wastinger.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'Moglan';
+    src: url('../FONTFILES/moglandemo/Moglan_DEMO.ttf') format('truetype');
+}

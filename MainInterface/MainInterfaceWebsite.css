@@ -133,8 +133,8 @@ body {
   top: -150px;
   left: 50px;
   width: 500px;
-  height: 220%;
-  background: url('../ImagesofElements/GirlWithProductHold.png');
+  height: 200%;
+  background: url('../ImagesofPopularProduct/Models/Model2.png');
   background-size: cover;
   animation: SlideFadeUp2 1s cubic-bezier(0.165, 0.84, 0.44, 1) both;
 }

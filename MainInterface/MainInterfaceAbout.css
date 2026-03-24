@@ -97,7 +97,7 @@ body {
     background-color: rgba(253, 254, 231, 0.7);
     box-shadow: 0 0 10px rgba(69, 79, 64, 0.7);
     border: none;
-    border-radius: 15px;
+    border-radius: 25px;
 
     animation: SlideUp 0.5s ease-out both;
 }
@@ -126,14 +126,14 @@ body {
 
 .AboutUsImageDepth {
     position: absolute;
-    background-image: url(../ImagesofElements/GirlWithProductHold.png);
-    top: -80px;
+    background-image: url(../ImagesofPopularProduct/Models/Model2.png);
+    bottom: 0;
     right: 10px;
-    width: 30%;
+    width: 430px;
     height: 120%;
     background-color: rgba(200, 235, 183, 0);
     border: 0px solid black;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center bottom;
     background-repeat: no-repeat;
     filter: drop-shadow(0 0 10px rgb(57, 51, 0));
@@ -147,6 +147,8 @@ body {
     font-family: Arial;
     font-size: 35px;
     animation: SlideUp 0.5s ease-out 0.3s both;
+    animation-range: entry 70% cover 50%;
+    animation-timeline: view();
 }
 
 .ParaAboutA1 {
@@ -158,7 +160,11 @@ body {
     text-align: justify;
     width: 40%;
     animation: SlideUp 0.5s ease-out 0.4s both;
+    animation-range: entry 70% cover 50%;
+    animation-timeline: view();
 }
+
+/* Preview 2 */
 
 .Container2A {
     position: absolute;
@@ -171,8 +177,10 @@ body {
     width: 40%;
     background-color: rgba(253, 254, 231, 0.7);
     box-shadow: 0 0 10px rgba(38, 35, 0, 0.6);
-    border-radius: 10px;
+    border-radius: 25px;
     animation: SlideUp 0.5s ease-out 0.5s both;
+    animation-range: entry 70% cover 50%;
+    animation-timeline: view();
 }
 
 .H1AboutA2 {
@@ -184,6 +192,7 @@ body {
     text-align: center;
     width: 40%;
 }
+
 .ParaAboutA2 {
     position: absolute;
     top: 70px;
@@ -251,20 +260,59 @@ body {
     width: 40%;
 }
 
+/* FOR PREVIEW 2 */
+
+.Container4A {
+    position: absolute;
+    top: 905px;
+    left: 50%;
+    translate: -50%;
+    width: 87%;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0);
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0);
+    
+    animation: SlideUp 0.5s ease-out 0.5s both;
+    animation-range: entry 30% cover 40%;
+    animation-timeline: view();
+}
+
+.H1AboutB1 {
+    position: absolute;
+    width: 100%;
+    
+}
+
+.GridContainerB1 {
+    position: absolute;
+    top: 80px;
+    background-color: gray;
+    width: 100%;
+    height: 600px;
+    left: 50%;
+    translate: -50%;
+    border: none;
+    border-radius: 20px;
+}
+
+
 /* FOOTER */
 
-.ContainerFooter {
+.ContainerFooter1 {
   position: absolute;
-  top: 1500px;
+  top: 1700px;
   left: 0;
   width: 100%;
   height: 50px;
-  background-color: rgb(219, 240, 214);
+  background-color: rgb(183, 183, 183);
   display: flex;
   justify-content: center;
   align-items: center;
   
 }
+
 
 /* ANIMATION */
 
@@ -277,6 +325,27 @@ body {
     to {
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+
+@keyframes AnimationMainPreviewC {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+        transform: translate(0, 40px) scale(1.1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(0, 0px) scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0px) scale(1);
     }
 }
 
