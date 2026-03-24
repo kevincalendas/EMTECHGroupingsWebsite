@@ -265,7 +265,7 @@ function BuyNowClicked() {
     productName = product.ProductName;
     ProductSelectedTextCheck.textContent = "Product Selected: " + product.ProductName;
     ProductCostTextCheck.textContent = "Product Cost: ₱" + currentBasePrice.toFixed(2);
-    ProductShippingFeeTextCheck.textContent = "Shipping Fee:₱$" + shippingfee;
+    ProductShippingFeeTextCheck.textContent = "Shipping Fee:₱" + shippingfee;
     ProductTotalCostTextCheck.textContent = "Total Cost: ₱" + total.toFixed(2);
     HideElementsPayment();
     UpdateCheckout();
@@ -281,8 +281,8 @@ function UpdateCheckout() {
     let subtotal = currentBasePrice * qty;
     let grandTotal = subtotal + shippingfee;
 
-    document.getElementById("ProductCostTextCheck").textContent = "Product Cost: $" + subtotal.toFixed(2);
-    document.getElementById("ProductTotalCostTextCheck").textContent = "Total Cost: $" + grandTotal.toFixed(2);
+    document.getElementById("ProductCostTextCheck").textContent = "Product Cost: ₱" + subtotal.toFixed(2);
+    document.getElementById("ProductTotalCostTextCheck").textContent = "Total Cost: ₱" + grandTotal.toFixed(2);
 }
 
 
