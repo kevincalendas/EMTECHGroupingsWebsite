@@ -13,20 +13,18 @@
     <div class="ContainerDockTop">
         <h1 class="NameShop">Skinly</h1>
         <a href="MainInterfaceWebsite.html" class="HomeDirect">Home</a>
-        <a href="ProductInterfaceWebsite.html" class="ProductDirect">Product</a>
+        <a onclick="document.getElementById('Category1Title').scrollIntoView({behavior: 'smooth'});" class="ProductDirect">Product</a>
         <a href="MainInterfaceAbout.html" class="BlogDirect">About</a>
-        <a href="ContactInterfaceWebsite.html" class="Account">Account</a>
         <div class="rightIcons">
             <img class="ShopBagButton" id="ShopBagButton" src="../ImagesofElements/ShopBagIcon.png" onclick="openPurchased();">
-            <img class="CartBagButton" src="../ImagesofElements/ShoppingCart.png">  
         </div>
     </div>
     <div class="ContainerMain">
         <div class="MainContextContent">
             <h1 class="MainTitle">Reveal Your Natural Glow <br>with Skinly</h1>
             <div class="ImagePreview1ATitle"></div>
-            <button class="ShopNowButton">Shop Now</button>
-        </div>
+            <button class="ShopNowButton" onclick="document.getElementById('Category1Title').scrollIntoView({behavior: 'smooth'});" class="ProductDirect">Shop Now</button>
+        </div> 
     </div>
 
     <!-- FOR CHECKOUT DETAILS DISPLAY-->
@@ -52,7 +50,7 @@
         <h1 class="Title3APrev"> Skinly. </h1>
 
         <div class="Image1APrev"></div>
-        <button class="Button1APreview">View Products</button>
+        <button class="Button1APreview" onclick="document.getElementById('Category1Title').scrollIntoView({behavior: 'smooth'});" class="ProductDirect">View Products</button>
     </div>
 
     <!-- FOR ANIMATION 2 PREVIEW PRODUCT HOME-->
@@ -126,7 +124,7 @@
     </div>
 
     <h5 class="Category1ATitle">Cozy Category</h5>
-    <h1 class="Category1Title">Popular Products</h1>
+    <h1 class="Category1Title" id="Category1Title">Popular Products</h1>
     <div class="ContainerPopularProducts">
         <div class="ProductPop1" id="ProductPop1" onclick="CurrentProductSelected = 1; ProductClicked();">
             <h2 class="ProductName">Skinly Facial</h2>

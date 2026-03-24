@@ -54,34 +54,34 @@ const ProductBuyLists = [
   {
     ProductSelected1: "Hydrating Face Mist",
     ProductPrice: "15.99",
-    ProductImage: "../ImagesofPopularProduct/ProductFacial1.png",
+    ProductImage: "../OwnerPictures/Kevin2.png",
   },
   {
     ProductSelected2: "Glowing Skin Toner",
     ProductPrice: "24.99",
-    ProductImage: "../ImagesofPopularProduct/ProductToner2.png",
+    ProductImage: "../OwnerPictures/Patricia.png",
   },
   {
     ProductSelected3: "Revitalizing Serum",
     ProductPrice: "39.99",
-    ProductImage: "../ImagesofPopularProduct/ProductSerum3.png",
+    ProductImage: "../OwnerPictures/Shane.png",
   },
   {
     ProductSelected4: "Nourishing Moisturizer",
     ProductPrice: "29.99",
-    ProductImage: "../ImagesofPopularProduct/ProductCleanser4.png",
+    ProductImage: "../OwnerPictures/Kevin.png",
   },
   {
     ProductSelected5: "Anti-Aging Serum",
     ProductPrice: "49.99",
     ProductImage:
-      "https://cdn.shopify.com/s/files/1/0267/4328/1539/products/AntiAgingSerum_1024x1024.jpg?v=1679654416",
+      "../OwnerPictures/Kevin.png",
   },
   {
     ProductSelected6: "Brightening Serum",
     ProductPrice: "39.99",
     ProductImage:
-      "https://cdn.shopify.com/s/files/1/0267/4328/1539/products/BrighteningSerum_1024x1024.jpg?v=1679654416",
+      "../OwnerPictures/Kevin1.png",
   },
   {
     ProductSelected7: "Hydrating Serum",
@@ -522,4 +522,24 @@ function cancelOrder(index, button) {
         showOrders();
       }, 500);
     }
+}
+
+function scrollToSection(sectionId) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+        element.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+}
+
+
+function scrolldownproducts() {
+  window.location.href='MainInterfaceWebsite.html';
+
+  setTimeout(() => {
+    document.getElementById('Category1Title').scrollIntoView({behavior: 'smooth'});
+  }, 1000);
+
 }

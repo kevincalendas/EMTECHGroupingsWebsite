@@ -9,11 +9,23 @@
             <div class="ContainerDockTop">
                 <h1 class="NameShop">Skinly</h1>
                 <a href="MainInterfaceWebsite.html" onclick="window.location.href='MainInterfaceWebsite.html'" class="HomeDirect">Home</a>
-                <a href="ProductInterfaceWebsite.html" class="ProductDirect">Product</a>
+                <a href="MainInterfaceWebsite.html" onclick="scrolldownproducts();"  class="ProductDirect">Product</a>
                 <a href="ContactInterfaceWebsite.html" class="Account">Account</a>
                 <div class="rightIcons">
-                    <img class="ShopBagButton" id="ShopBagButton" src="../ImagesofElements/ShopBagIcon.png">
+                    <img class="ShopBagButton" id="ShopBagButton" src="../ImagesofElements/ShopBagIcon.png" onclick="openPurchased();">
                     <img class="CartBagButton" src="../ImagesofElements/ShoppingCart.png">  
+                </div>
+            </div>
+            <div id="PurchasedWindow" class="SideWindow">
+                <div class="SideHeader">
+                    <h1 class="H1AboutC1">Your Purchased</h1>
+                    <button onclick="closePurchased()" class="CloseBtn">×</button>
+                </div>
+                
+                <div id="PurchasedListDisplay"></div>
+
+                <div class="SideFooter">
+                    <p class="FooterNote">Thank you for choosing Skinly!</p>
                 </div>
             </div>
 
@@ -115,5 +127,8 @@
                 <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="8" xChannelSelector="R" yChannelSelector="G"/>
             </filter>
             </svg>
+
+            <!-- FOR JS -->
+            <script src="MainInterface.js"></script>
         </body>
     </html>

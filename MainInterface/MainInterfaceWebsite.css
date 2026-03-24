@@ -3,6 +3,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -53,6 +57,13 @@ body {
   font-family: Helvetica;
   transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation: Slideright 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s both;
+
+  cursor:pointer;
+}
+
+#Category1Title, 
+.ContainerNewArrivalProducts {
+    scroll-margin-top: 100px; /* Adjust mo depende sa kapal ng Nav Bar mo */
 }
 
 .HomeDirect:hover,
@@ -135,6 +146,8 @@ body {
   width: 500px;
   height: 200%;
   background: url('../ImagesofPopularProduct/Models/Model2.png');
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
   background-size: cover;
   animation: SlideFadeUp2 1s cubic-bezier(0.165, 0.84, 0.44, 1) both;
 }
@@ -250,17 +263,17 @@ body {
 }
 
 .ProductPop1 {
-  background-image: url("../ImagesofPopularProduct/ProductFacial1.png");
+  background-image: url("../OwnerPictures/Kevin2.png");
   background-size: cover;
 }
 
 .ProductPop2 {
-  background-image: url("../ImagesofPopularProduct/ProductToner2.png");
+  background-image: url("../OwnerPictures/Patricia.png");
   background-size: cover;
 }
 
 .ProductPop3 {
-  background-image: url("../ImagesofPopularProduct/ProductSerum3.png");
+  background-image: url("../OwnerPictures/Shane.png");
   background-size: cover;
 }
 
@@ -275,6 +288,7 @@ body {
   bottom: 30px;
   font-family: Helvetica;
   font-size: 18px;
+  text-shadow: 0 0 10px rgb(255, 255, 237, 0.9);
 }
 
 .ProductPrice {
@@ -283,6 +297,7 @@ body {
   bottom: 5px;
   font-family: Helvetica;
   font-size: 15px;
+  text-shadow: 0 0 10px rgb(255, 255, 237, 0.9);
 }
 
 /*Footer*/
@@ -388,8 +403,9 @@ body {
 }
 
 .ProductSerum5 {
-  background-image: url('../ImagesofPopularProduct/ProductBright6A.jpg');
+  background-image: url('../OwnerPictures/Kevin.png');
   background-size: cover;
+  background-position: 0% 150%;
   width: 250px;
   min-width: 200px;
   height: 350px;
@@ -417,21 +433,23 @@ body {
   box-shadow: 0 0 20px rgba(140, 139, 129, 0.6);
   transition: all 0.2s ease-out;
   margin-top: 40px;
+  background: url('../OwnerPictures/Kevin1.png');
 }
 
 .ProductSerum1 {
-  background-image: url("../ImagesofPopularProduct/ProductFacial1.png");
+  background-image: url("../OwnerPictures/Kevin2.png");
   background-size: cover;
 }
 
 .ProductSerum2 {
-  background-image: url("../ImagesofPopularProduct/ProductToner2.png");
+  background-image: url("../OwnerPictures/Patricia.png");
   background-size: cover;
 }
 
 .ProductSerum3 {
-  background-image: url("../ImagesofPopularProduct/ProductToner2A.jpg");
-  background-size: cover;
+  background-image: url("../OwnerPictures/Chloe.png");
+  background-size: 100% 190%;
+  background-position: 150% 50%;
 }
 
 .ProductSerum4 {
