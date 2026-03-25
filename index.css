@@ -1,0 +1,96 @@
+.ShopNowButton1 {
+  position: absolute;
+  bottom: 15px;
+  right: 5%;
+  width: 355px;
+  height: 50px;
+  background-color: rgb(37, 33, 16);
+  color: white;
+  font-family: Helvetica;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  animation: Slideright 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s both;
+  transition: all 0.3s ease-out;
+}
+
+.ShopNowButton1:hover {
+    scale: 1.1;
+}
+
+.MainTitle1 {
+  position: absolute;
+  top: -20px;
+  width: 100%;
+  text-align: right;
+  right: 5%;
+  font-size: 55px;
+  font-family: 'Wastinger';
+  font-weight: bolder;
+  animation: Slideright 1s cubic-bezier(0.075, 0.82, 0.165, 1) both;
+  filter:drop-shadow(0 0 10px rgba(255, 255, 255, 1));
+}
+
+.ImagePreview1ATitle1 {
+  position: absolute;
+  margin: 0;
+  top: -150px;
+  left: 50px;
+  width: 500px;
+  height: 200%;
+  background: url('../ImagesofPopularProduct/Models/Model2.png');
+  border-radius: 10px;
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  background-size: cover;
+  animation: SlideFadeUp2 1s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+}
+
+.ImagePreview2ATitle1 {
+  position: absolute;
+  margin: 0;
+  top: -150px;
+  left: 300px;
+  width: 500px;
+  height: 200%;
+  background: url('/ImagesofPopularProduct/Models/Model3.png');
+  border-radius: 10px;
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  background-size: cover;
+  animation: SlideFadeUp2 1s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+}
+
+.ImagePreview3ATitle1 {
+  position: absolute;
+  margin: 0;
+  top: -150px;
+  left: 680px;
+  width: 300px;
+  height: 200%;
+  background: url('OwnerPictures/CUTOUT/Shane.png');
+  border-radius: 10px;
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  background-size: cover;
+  animation: SlideFadeUp2 1s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+  z-index: -1;
+}
+
+.ImagePreview4ATitle1 {
+  position: absolute;
+  margin: 0;
+  top: -150px;
+  left: 800px;
+  width: 500px;
+  height: 200%;
+  background: url('OwnerPictures/CUTOUT/Kevin.png');
+  background-position: 50% 40%;
+  border-radius: 10px;
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  background-size: cover;
+  animation: SlideFadeUp2 1s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+  z-index: -2;
+}
