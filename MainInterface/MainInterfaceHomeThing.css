@@ -36,11 +36,12 @@
 
 .Title3APrev {
     position: absolute;
-    bottom: 3%;
+    bottom: 1%;
     right: 3%;
     font-family: 'Wastinger';
     color: rgb(46, 32, 0);
-    font-size: 195px;
+    font-size: 135px;
+    text-align: right;
     background-color: none;
     animation: Animation1SlideUpParrax 5s ease-out both, ChangingFontsAnimation 25s ease 2 both;
     animation-range: entry 30% cover 30%;

@@ -17,36 +17,43 @@ const productList = [
     ProductName: "Skinly Facial",
     ProductPrice: "320.00",
     ProductCategory: "Facial",
+    ProductDescription1: "A gentle foaming cleanser designed to lift away impurities and excess oil without stripping the skin of its natural moisture. It leaves the face feeling refreshed and perfectly prepped.",
+
   },
   {
     ProductID: "ProductPop2",
     ProductName: "Skinly Toner",
     ProductPrice: "250.00",
     ProductCategory: "Toner",
+    ProductDescription1: "This hydrating formula balances the skin's pH levels and tightens pores. It acts as a vital bridge in your routine, allowing serums and moisturizers to penetrate deeper into the skin.",
   },
   {
     ProductID: "ProductPop3",
     ProductName: "Skinly Serum",
     ProductPrice: "220.00",
     ProductCategory: "Serum",
+    ProductDescription1: "A lightweight, high-concentration formula that delivers potent nutrients directly to the skin. It focuses on deep repair and nourishment to achieve a healthy, lit-from-within glow.",
   },
   {
     ProductID: "ProductPop4",
     ProductName: "Skinly cleanse",
     ProductPrice: "230.00",
     ProductCategory: "cleanse",
+    ProductDescription1: "A mild, non-irritating liquid cleanser specially formulated for sensitive skin. It effectively purifies the pores while maintaining the skin's essential protective barrier.",
   },
   {
     ProductID: "ProductSerum1",
     ProductName: "Skinly Cream",
     ProductPrice: "350.00",
     ProductCategory: "Cream",
+    ProductDescription1: "The ultimate hydration hero for dry skin. This rich moisturizer provides long-lasting moisture and protection, ensuring your complexion remains soft, plump, and supple all day.",
   },
   {
     ProductID: "ProductSerum2",
     ProductName: "Skinly Bright",
     ProductPrice: "299.00",
     ProductCategory: "Brightener",
+    ProductDescription1: "A targeted brightening solution that helps even out skin tone and fade dark spots. It is the go-to product for those aiming to achieve a radiant and clear glass skin appearance.",
   }
 ];
 
@@ -151,11 +158,17 @@ function exitProductOverview() {
 }
 
 function ProductClicked() {
+  const MainProductDescription1 = document.getElementById("MainProductDescription");
+
   if (CurrentProductSelected === 1) {
     ProductNamePreview.textContent = productList[0].ProductName;
     ProductPricePreview.textContent ="₱" + productList[0].ProductPrice;
     ProductImagePreview.src = ProductBuyLists[0].ProductImage;
+
     CategoryType.textContent = productList[0].ProductCategory;
+    MainProductDescription1.textContent = productList[0].ProductDescription1;
+
+
     ProductImagePreview.style.opacity = "1";
     CurrentProductSelected = 1;
 
@@ -165,6 +178,8 @@ function ProductClicked() {
     ProductPricePreview.textContent = "₱" + productList[1].ProductPrice;
     ProductImagePreview.src = ProductBuyLists[1].ProductImage;
     CategoryType.textContent = productList[3].ProductCategory;
+    MainProductDescription1.textContent = productList[1].ProductDescription1;
+
     ProductImagePreview.style.opacity = "1";
     CurrentProductSelected = 2;
 
@@ -174,6 +189,7 @@ function ProductClicked() {
     ProductPricePreview.textContent = "₱" + productList[2].ProductPrice;
     ProductImagePreview.src = ProductBuyLists[2].ProductImage;
     CategoryType.textContent = productList[3].ProductCategory;
+    MainProductDescription1.textContent = productList[2].ProductDescription1;
     ProductImagePreview.style.opacity = "1";
     CurrentProductSelected = 3;
 
@@ -183,6 +199,7 @@ function ProductClicked() {
     ProductPricePreview.textContent = "₱" + productList[3].ProductPrice;
     ProductImagePreview.src = ProductBuyLists[3].ProductImage;
     CategoryType.textContent = productList[3].ProductCategory;
+    MainProductDescription1.textContent = productList[3].ProductDescription1;
     ProductImagePreview.style.opacity = "1";
     CurrentProductSelected = 4;
 
@@ -192,6 +209,7 @@ function ProductClicked() {
     ProductPricePreview.textContent = "₱" + productList[4].ProductPrice;
     ProductImagePreview.src = ProductBuyLists[4].ProductImage;
     CategoryType.textContent = productList[4].ProductCategory;
+    MainProductDescription1.textContent = productList[4].ProductDescription1;
     ProductImagePreview.style.opacity = "1";
     CurrentProductSelected = 5;
 
@@ -201,6 +219,7 @@ function ProductClicked() {
     ProductPricePreview.textContent = "₱" + productList[5].ProductPrice;
     ProductImagePreview.src = ProductBuyLists[5].ProductImage;
     CategoryType.textContent = productList[5].ProductCategory;
+    MainProductDescription1.textContent = productList[5].ProductDescription1;
     ProductImagePreview.style.opacity = "1";
     CurrentProductSelected = 6;
 
@@ -490,7 +509,7 @@ function showOrders() {
                     <p class="ItemNameText"><b>${item.name}</b></p>
                     <p class="ItemDetailsText">Qty: ${item.quantity} | <span class="GoldPrice">${item.totalcost}</span></p>
                     <p class="ItemDateText">${item.date}</p>
-                    <button onclick="cancelOrder(${index}, this)" class="CancelBtn">Cancel Order</button>
+                    <button onclick="cancelOrderMain1(${index}, this)" class="CancelBtn">Cancel Order</button>
                 </div>
             </div>
         `;
@@ -505,24 +524,64 @@ function closePurchased() {
     document.getElementById("PurchasedWindow").classList.remove("active");
 }
 
-function cancelOrder(index, button) {
+function cancelOrder() {
   let purchased = JSON.parse(localStorage.getItem("purchased")) || [];
 
-  const card = button.closest(".OrderSideCard");
-
-  if (confirm("Are you sure you want to cancel this order?")) {
-      
-    card.style.animation = "ScaleDown 0.3s ease-out forwards";
-
-      setTimeout(() => {
-        purchased.splice(index, 1);
-
-        localStorage.setItem("purchased", JSON.stringify(purchased));
-
-        showOrders();
-      }, 500);
+  if(itemButtonToDelete) {
+    const card = itemButtonToDelete.closest(".OrderSideCard");
+    if (card) {
+      card.style.animation = "ScaleDown 0.3s ease-out forwards";
     }
+  } else {
+    console.error("error sha beh sa cancel order");
+  }
+
+  ClosecancelOrderMain1();
+  
+      setTimeout(() => {
+        if (itemIndexToDelete !== null) {
+            purchased.splice(itemIndexToDelete, 1);
+            localStorage.setItem("purchased", JSON.stringify(purchased));
+            showOrders();
+        }
+
+        itemButtonToDelete = null;
+        itemIndexToDelete = null;
+      }, 500);
 }
+
+let itemIndexToDelete = null;
+let itemButtonToDelete = null;
+
+function cancelOrderMain1(index, button) {
+
+  itemIndexToDelete = index;
+  itemButtonToDelete = button;
+
+  const MainWindowofCancelOrder = document.getElementById('MainCancelOrder');
+  const MainCancelWindow = document.getElementById('MainCancelWindow');
+
+  MainWindowofCancelOrder.style.display = "block";
+
+  MainCancelWindow.style.animation = "ScaleUp 0.3s ease-out forwards";
+  MainWindowofCancelOrder.style.animation = "OpacityFadeIn 0.3s ease-out forwards";
+  closePurchased() ;
+
+}
+
+function ClosecancelOrderMain1() {
+  const MainWindowofCancelOrder = document.getElementById('MainCancelOrder');
+  const MainCancelWindow = document.getElementById('MainCancelWindow');
+
+  MainCancelWindow.style.animation = "ScaleDown 0.3s ease-out forwards";
+  MainWindowofCancelOrder.style.animation = "OpacityFadeOut 0.3s ease-out forwards";
+  openPurchased();
+  setTimeout(() => {
+    MainWindowofCancelOrder.style.display = "none";
+  }, 500);
+
+}
+
 
 function scrollToSection(sectionId) {
     const element = document.getElementById(sectionId);

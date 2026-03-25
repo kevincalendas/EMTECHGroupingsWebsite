@@ -185,7 +185,7 @@ html {
 
 .Category1ATitle {
   position: relative;
-  top: 2420px;
+  top: 2120px;
   margin-top: 90px;
   width: 100%;
   text-align: center;
@@ -199,7 +199,7 @@ html {
 
 .Category1Title {
   position: absolute;
-  top: 2480px;
+  top: 2270px;
   margin-top: -30px;
   width: 100%;
   text-align: center;
@@ -212,7 +212,7 @@ html {
 
 .ContainerPopularProducts {
   position: absolute;
-  top: 2558px;
+  top: 2308px;
   left: 0;
   width: 100%;
   height: auto;
@@ -316,7 +316,7 @@ html {
 
 .Category2Title {
   position: absolute;
-  top: 2955px;
+  top: 2705px;
   width: 100%;
   text-align: center;
   font-size: 45px;
@@ -331,7 +331,7 @@ html {
 
 .ContainerNewArrivalProducts {
   position: absolute;
-  top: 3055px;
+  top: 2805px;
   left: 0;
   width: 100%;
   height: 450px;
@@ -351,7 +351,7 @@ html {
 
 .ContainerNewArrivalProducts2 {
   position: absolute;
-  top: 3555px;
+  top: 3285px;
   left: 0;
   width: 100%;
   height: 450px;

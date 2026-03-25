@@ -12,7 +12,7 @@
 <body>
     <div class="ContainerDockTop">
         <h1 class="NameShop">Skinly</h1>
-        <a href="MainInterfaceWebsite.html" class="HomeDirect">Home</a>
+        <a href="MainInterfaceWebsite.html" class="HomeDirect">Home</a> 
         <a onclick="document.getElementById('Category1Title').scrollIntoView({behavior: 'smooth'});" class="ProductDirect">Product</a>
         <a href="MainInterfaceAbout.html" class="BlogDirect">About</a>
         <div class="rightIcons">
@@ -40,14 +40,24 @@
             <p class="FooterNote">Thank you for choosing Skinly!</p>
         </div>
     </div>
+
+    <!--FOR CANCEL ORDER NOTICE-->
+
+    <div class="MainCancelOrder" id="MainCancelOrder">
+        <div class="MainCancelWindow" id="MainCancelWindow">
+            <h1 class="MainCancelNotice"> Are you sure you want to cancel your order?</h1>
+            <button class="MainCancelNoticeButtonYes" id="MainCancelNoticeButtonYes" onclick="cancelOrder()"> Yes </button>
+            <button class="MainCancelNoticeButtonYNo" id="MainCancelNoticeButtonYNo" onclick="ClosecancelOrderMain1()"> No </button>
+        </div>
+    </div>
     
 
     <!--FOR ANIMATION 1 PREVIEW PRODUCT HOME-->
 
     <div class="MainContainer1Preview">
-        <h1 class="Title1APrev"> Glow naturally. </h1>
-        <h1 class="Title2APrev"> with </h1>
-        <h1 class="Title3APrev"> Skinly. </h1>
+        <h1 class="Title1APrev"> Light on </h1>
+        <h1 class="Title2APrev"> your skin. </h1>
+        <h1 class="Title3APrev"> Bright on <br>your life. </h1>
 
         <div class="Image1APrev"></div>
         <button class="Button1APreview" onclick="document.getElementById('Category1Title').scrollIntoView({behavior: 'smooth'});" class="ProductDirect">View Products</button>
@@ -57,7 +67,7 @@
 
     <div class="MainContainer2Preview">
         <div class="FramePreview1B"></div>
-        <h1 class="TitlePreview1B">The Glow Vibe</h1>
+        <h1 class="TitlePreview1B"> Skinly</h1>
         <h1 class="TitlePreview2B">Best selling Product</h1>
         <div class="ImagePreview1B"></div>
         <div class="ImagePreview2B"></div>
@@ -85,7 +95,7 @@
             </p>
         <button class="AddCartButtonMain" id="AddCartButtonMain">Add to Cart</button>
         <button class="BuyButtonMain" id="BuyButtonMain" onclick="BuyNowClicked();">Buy Now</button>
-
+        
         <div class="PaymentWindow" id="PaymentWindow">
             <h1 class="CheckoutName">Checkout</h1>
 
@@ -116,7 +126,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="AddedtoCartCheckWindow" id="AddedtoCartCheckWindow">
         <img class="AddedtoBagShineIMG" id="AddedtoBagShineIMG" src="../ImagesofElements/ShineIcon.png">
         <img class="AddedtoBagIMG" id="AddedtoBagIMG" src="../ImagesofElements/ShopBagIcon.png">
@@ -126,19 +136,19 @@
     <h5 class="Category1ATitle">Cozy Category</h5>
     <h1 class="Category1Title" id="Category1Title">Popular Products</h1>
     <div class="ContainerPopularProducts">
-        <div class="ProductPop1" id="ProductPop1" onclick="CurrentProductSelected = 1; ProductClicked();">
+        <div class="ProductPop1" id="ProductPop1" onclick="CurrentProductSelected = 1; ProductClicked(1);">
             <h2 class="ProductName">Skinly Facial</h2>
             <p class="ProductPrice">₱320.00</p>
         </div>
-        <div class="ProductPop2" id="ProductPop2" onclick="CurrentProductSelected = 2; ProductClicked();">
+        <div class="ProductPop2" id="ProductPop2" onclick="CurrentProductSelected = 2; ProductClicked(2);">
             <h2 class="ProductName">Skinly Toner</h2>
             <p class="ProductPrice">₱250.00</p>
         </div>
-        <div class="ProductPop3" id="ProductPop3" onclick="CurrentProductSelected = 3; ProductClicked();">
+        <div class="ProductPop3" id="ProductPop3" onclick="CurrentProductSelected = 3; ProductClicked(3);">
             <h2 class="ProductName">Skinly Serum</h2>
             <p class="ProductPrice">₱220.00</p>
         </div>
-        <div class="ProductPop4" id="ProductPop4" onclick="CurrentProductSelected = 4; ProductClicked();">
+        <div class="ProductPop4" id="ProductPop4" onclick="CurrentProductSelected = 4; ProductClicked(4);">
             <h2 class="ProductName">Skinly cleanse</h2>
             <p class="ProductPrice">₱230.00</p>
         </div>
@@ -151,19 +161,19 @@
     <h1 class="Category2Title">Our Products</h1>
 
     <div class="ContainerNewArrivalProducts">
-        <div class="ProductSerum1" onclick="CurrentProductSelected = 1; ProductClicked();">
+        <div class="ProductSerum1" onclick="CurrentProductSelected = 1; ProductClicked(1);">
             <h2 class="ProductName1A">Skinly Facial</h2>
             <p class="ProductPrice1A">₱320.00</p>
         </div>
-        <div class="ProductSerum2" onclick="CurrentProductSelected = 2; ProductClicked();">
+        <div class="ProductSerum2" onclick="CurrentProductSelected = 2; ProductClicked(2);">
             <h2 class="ProductName1B">Skinly Toner</h2>
             <p class="ProductPrice1B">₱250.00</p>
         </div>
-        <div class="ProductSerum3" onclick="CurrentProductSelected = 3; ProductClicked();">
+        <div class="ProductSerum3" onclick="CurrentProductSelected = 3; ProductClicked(3);">
             <h2 class="ProductName1C">Skinly Serum</h2>
             <p class="ProductPrice1C">₱220.00</p>
         </div>
-        <div class="ProductSerum4" onclick="CurrentProductSelected = 4; ProductClicked();">
+        <div class="ProductSerum4" onclick="CurrentProductSelected = 4; ProductClicked(4);">
             <h2 class="ProductName1D">Skinly cleanse</h2>
             <p class="ProductPrice1D">₱230.00</p>
         </div>
@@ -171,11 +181,11 @@
     </div>
 
     <div class="ContainerNewArrivalProducts2">
-        <div class="ProductSerum5" onclick="CurrentProductSelected = 5; ProductClicked();">
+        <div class="ProductSerum5" onclick="CurrentProductSelected = 5; ProductClicked(5);">
             <h2 class="ProductName1A">Skinly Cream</h2>
             <p class="ProductPrice1A">₱350.00</p>
         </div>
-        <div class="ProductSerum6" onclick="CurrentProductSelected = 6; ProductClicked();">
+        <div class="ProductSerum6" onclick="CurrentProductSelected = 6; ProductClicked(6);">
             <h2 class="ProductName1B">Skinly Bright</h2>
             <p class="ProductPrice1B">₱299.00</p>
         </div>
